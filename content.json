@@ -5,7 +5,7 @@
     "font": "sans",
     "fontSize": 12,
     "lineHeight": 1.8,
-    "color": "red",
+    "color": "#333333",
     "background": "#ffffff",
     "titleSize": 13,
     "titleColor": "#000000",
