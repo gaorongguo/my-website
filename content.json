@@ -22,7 +22,7 @@
     "titleFont": "sans",
     "nameColor": "red",
     "nameWeight": "bold",
-    "nameFont": "mono",
+    "nameFont": "sans",
     "nameSize": 26
   },
   "sections": [
