@@ -20,7 +20,6 @@
     "menuActive": "#000000",
     "textAlign": "justify",
     "titleFont": "sans",
-    "nameSize": -1,
     "nameColor": "red",
     "nameWeight": "bold"
   },
