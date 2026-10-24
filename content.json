@@ -27,6 +27,9 @@
         {
           "title": "摄影",
           "titleEn": "Photography",
+          "style": {
+            "gridWidth": -1
+          },
           "pages": [
             {
               "title": "孪",
@@ -36,9 +39,10 @@
               "images": [
                 {
                   "src": "/images/twins-1.jpg"
-                }
+                },
+                {}
               ],
-              "text": "Nowadays, astrology is becoming increasingly popular. People often try to judge a person based on their horoscope signs. However, I do not prefer to understand others through such a narrow lens, which can create strong preconceptions. This makes me think of some words in Western philosophical history. St. Augustine once profoundly attacked astrology with the fates of twin brothers in his Confessions and The City of God. While this argument was not original to St. Augustine, he derived it from the Greek skeptic Carneades, one of the leaders in Plato's garden.\n\nCarneades said, \"People born at the same time differ in temperament and fate,\" and \"people sharing the same encounters may not necessarily be born at the same moment.\" Inspired by this, I decided to conduct a project based on identical twins who are over 50 years old to observe how they have changed over time. In fact, I learned about this from a saying of Confucius's: “Fifty to know the fate.\" There are different explanations about fate, but the fifties are often considered the time to know what it is.\n\nAfter numerous repetitive experiments, I determined the format of my work: face-to-face. Although identical twins may look very similar, they are still two different people. Face-to-face is more like seeing yourself in the mirror. By regarding people as a mirror, one could know what he or she has gained or lost and could see himself or herself more clearly. 孪 时下比较流行星座，人们喜欢用星座去完成对一个人的判断，我自己不喜欢这种先入为主的了解彼此的方式，这让我想起了西方哲学史上的一些言论。圣．奥古斯丁曾在《忏悔录》和《上帝之城》中用孪生兄弟问题大事抨击占星学。这一论证并非奥古斯丁所独创，它导源于希腊的怀疑派哲学家，柏拉图学园的首脑之一 ——卡涅阿德斯。\n\n卡涅阿德斯曾说：“同一时刻出生的人，其气质命运迥然不同”、“遭遇相同的人，却不一定出生于同一时刻”。受此启发，我决定做一个关于同卵双胞胎的项目，把年龄锁定在50岁以上，实际上借用了孔子的“五十而知天命”，天命有不同的解释，但五十岁通常被称为知命之年。 经过反复的实验后，我确定了现在作品的形式——面对面。他/她们可能看起来相似，但同卵双胞胎毕竟是两个不同的个体，面对面更像是在照镜子，“以人为镜，可以知得失，照见自己”。 | 1/10"
+              "text": "Nowadays, astrology is becoming increasingly popular. People often try to judge a person based on their horoscope signs. However, I do not prefer to understand others through such a narrow lens, which can create strong preconceptions. This makes me think of some words in Western philosophical history. St. Augustine once profoundly attacked astrology with the fates of twin brothers in his Confessions and The City of God. While this argument was not original to St. Augustine, he derived it from the Greek skeptic Carneades, one of the leaders in Plato's garden.\n\nCarneades said, \"People born at the same time differ in temperament and fate,\" and \"people sharing the same encounters may not necessarily be born at the same moment.\" Inspired by this, I decided to conduct a project based on identical twins who are over 50 years old to observe how they have changed over time. In fact, I learned about this from a saying of Confucius's: “Fifty to know the fate.\" There are different explanations about fate, but the fifties are often considered the time to know what it is.\n\nAfter numerous repetitive experiments, I determined the format of my work: face-to-face. Although identical twins may look very similar, they are still two different people. Face-to-face is more like seeing yourself in the mirror. By regarding people as a mirror, one could know what he or she has gained or lost and could see himself or herself more clearly. \n\n\n孪 \n\n时下比较流行星座，人们喜欢用星座去完成对一个人的判断，我自己不喜欢这种先入为主的了解彼此的方式，这让我想起了西方哲学史上的一些言论。圣．奥古斯丁曾在《忏悔录》和《上帝之城》中用孪生兄弟问题大事抨击占星学。这一论证并非奥古斯丁所独创，它导源于希腊的怀疑派哲学家，柏拉图学园的首脑之一 ——卡涅阿德斯。\n\n卡涅阿德斯曾说：“同一时刻出生的人，其气质命运迥然不同”、“遭遇相同的人，却不一定出生于同一时刻”。受此启发，我决定做一个关于同卵双胞胎的项目，把年龄锁定在50岁以上，实际上借用了孔子的“五十而知天命”，天命有不同的解释，但五十岁通常被称为知命之年。 经过反复的实验后，我确定了现在作品的形式——面对面。他/她们可能看起来相似，但同卵双胞胎毕竟是两个不同的个体，面对面更像是在照镜子，“以人为镜，可以知得失，照见自己”。"
             },
             {
               "title": "母与子",
