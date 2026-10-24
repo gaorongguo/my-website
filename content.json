@@ -1,0 +1,274 @@
+{
+ "siteName": "高荣国",
+ "siteNameEn": "Rongguo Gao",
+ "style": {
+  "font": "sans",
+  "fontSize": 12,
+  "lineHeight": 1.8,
+  "color": "#333333",
+  "background": "#ffffff",
+  "titleSize": 13,
+  "titleColor": "#000000",
+  "captionSize": 11,
+  "captionColor": "#888888",
+  "linkColor": "#666666",
+  "linkHover": "#56a7fa",
+  "imageWidth": 640,
+  "gridWidth": 220,
+  "menuSize": 12,
+  "menuColor": "#666666",
+  "menuActive": "#000000"
+ },
+ "sections": [
+  {
+   "title": "作品",
+   "titleEn": "Artworks",
+   "style": {},
+   "pages": [],
+   "categories": [
+    {
+     "title": "摄影",
+     "titleEn": "Photography",
+     "style": {},
+     "pages": [
+      {
+       "title": "孪",
+       "titleEn": "Identical Twins",
+       "slug": "twins",
+       "layout": "slideshow",
+       "style": {},
+       "images": [
+        {
+         "src": "/images/twins-1.jpg",
+         "caption": "",
+         "captionEn": ""
+        }
+       ],
+       "text": "Nowadays, astrology is becoming increasingly popular. People often try to judge a person based on their horoscope signs. However, I do not prefer to understand others through such a narrow lens, which can create strong preconceptions. This makes me think of some words in Western philosophical history. St. Augustine once profoundly attacked astrology with the fates of twin brothers in his Confessions and The City of God. While this argument was not original to St. Augustine, he derived it from the Greek skeptic Carneades, one of the leaders in Plato's garden.\n\nCarneades said, \"People born at the same time differ in temperament and fate,\" and \"people sharing the same encounters may not necessarily be born at the same moment.\" Inspired by this, I decided to conduct a project based on identical twins who are over 50 years old to observe how they have changed over time. In fact, I learned about this from a saying of Confucius's: “Fifty to know the fate.\" There are different explanations about fate, but the fifties are often considered the time to know what it is.\n\nAfter numerous repetitive experiments, I determined the format of my work: face-to-face. Although identical twins may look very similar, they are still two different people. Face-to-face is more like seeing yourself in the mirror. By regarding people as a mirror, one could know what he or she has gained or lost and could see himself or herself more clearly. 孪 时下比较流行星座，人们喜欢用星座去完成对一个人的判断，我自己不喜欢这种先入为主的了解彼此的方式，这让我想起了西方哲学史上的一些言论。圣．奥古斯丁曾在《忏悔录》和《上帝之城》中用孪生兄弟问题大事抨击占星学。这一论证并非奥古斯丁所独创，它导源于希腊的怀疑派哲学家，柏拉图学园的首脑之一 ——卡涅阿德斯。\n\n卡涅阿德斯曾说：“同一时刻出生的人，其气质命运迥然不同”、“遭遇相同的人，却不一定出生于同一时刻”。受此启发，我决定做一个关于同卵双胞胎的项目，把年龄锁定在50岁以上，实际上借用了孔子的“五十而知天命”，天命有不同的解释，但五十岁通常被称为知命之年。 经过反复的实验后，我确定了现在作品的形式——面对面。他/她们可能看起来相似，但同卵双胞胎毕竟是两个不同的个体，面对面更像是在照镜子，“以人为镜，可以知得失，照见自己”。 | 1/10",
+       "textEn": ""
+      },
+      {
+       "title": "母与子",
+       "titleEn": "Mother and Child",
+       "slug": "mother",
+       "layout": "slideshow",
+       "style": {},
+       "images": [
+        {
+         "src": "/images/mother-1.jpg",
+         "caption": "",
+         "captionEn": ""
+        }
+       ],
+       "text": "2014 – ongoing\n\nIn 2011, while working on my series about twins, I discovered that children from two different families had strikingly similar faces. I was surprised because these families lived several dozen miles apart. After inquiring, I learned that both sets of children had Down syndrome. Due to their distinctive facial features, they are known in some areas as \"international faces\" or \"internationals.\" Out of curiosity, I looked up a great deal of information. What caught my attention was that the Italian painter Andrea Mantegna (1431–1506) depicted the infant Jesus in his painting \"Madonna and Child\" with characteristics of Down syndrome, while Martin Luther (1483-1546) publicly called for the killing of mentally handicapped people.\n\nHaving two vastly different attitudes within the same religion is thought-provoking. Some speculate that this might be because at that time, Down syndrome was not considered a disease. After all, it was not until 1866 that the existence of this condition of congenital mental retardation was first published by John Langton Down. This highlights the variability in the classification criteria and categories of disabilities and underscores that the division between \"normal\" and \"disabled\" is, in fact, a conscious social construct.\n\nEveryone has a different body, and it is because of this difference that we are able to exist as unique beings. Yet, the distinct appearance of disabled individuals often becomes a public focal point, leading to belittled, ridiculed, and even seen as evil. When people are used to looking at the disabled community differently, raising a child with a disability can be extremely stressful. So I decided to respond to Andrea Mantegna's Madonna and Child portraits by photographing some mothers and children who are recognized as being born with disabilities.\n\n母与子 2011年，我在拍摄双胞胎系列作品时，发现两个模特家里的孩子长着相似的面孔，当时十分惊讶，毕竟两个家庭相距几十里。经过询问才得知他们患有唐氏综合征。由于独特的面部特征，他们在部分地区被俗称为“国际脸”或“国际人”。 出于好奇，我查找了大量资料。其中吸引我的是，意大利画家安德烈亚·曼特尼亚（Andrea Mantegna，1431～1506）将《圣母子》像中的耶稣描绘成了有唐氏综合征特征的孩子，而马丁·路德（Martin Luther，1483-1546）却公开呼吁杀死智障人士。在同一宗教中有两种截然不同的态度令人深思，有人推测原因是当时唐氏综合征还没有被认为是一种疾病，毕竟到1866年才被约翰·朗顿·唐首次发表这一存在先天性智力障碍的病症。这显示了残障的分类标准与范畴是可变的，也显示了关于正常人与残障人的划分其实是某种有意识的社会行为。 每个人都有一个与众不同的身体,正因为这种差异我们得以作为独特的存在。然而，残障人身体的迥异样貌却往往成为公众注目的焦点，以致于被轻视、嘲笑甚至被视为邪恶。当人们习惯了以异样的目光去看待残障群体的时候，抚养残障孩子就面临巨大压力。于是我就想回应一下安德烈亚·曼特尼亚的《圣母子》肖像，拍摄一些母亲和被认定为天生残障的孩子。\n\n| 1/5",
+       "textEn": ""
+      },
+      {
+       "title": "过去的我不再了",
+       "titleEn": "The Person I Used to Be Is No Longer",
+       "slug": "person",
+       "layout": "slideshow",
+       "style": {},
+       "images": [
+        {
+         "src": "/images/person-1.jpg",
+         "caption": "",
+         "captionEn": ""
+        }
+       ],
+       "text": "This work stems from my experience with failed facial recognition at a security checkpoint. This incident made me skeptical about the reliability of the technology and, at the same time, triggered thoughts about the complexity of personal identity. In order to study this issue in depth, I collected a variety of documents from different periods of time, including student ID cards, graduation certificates, temporary residence permits, driver's licenses, etc. These documents not only involve the question of \"who,\" but they also serve as crucial references to my personal journey, recording key information such as my place of birth, length of residency, job title, skills, and the social roles I have played at different times.\n\nIn comparing these ID photos, I noticed that my appearance changed significantly, not only in relation to time but also influenced by the lenses and angles each photographer used. This resulted in the fact that even photographs taken in the same year could present very different appearances. This prompted me to think about the challenges of relying on past looks to confirm present identities. Identities are not static, and over time certain identities may no longer exist. In a sense, the me in the past photographs has died.\n\nThe connection between death and photography reminded me of paintings used to depict death before the advent of photography and the art of post-mortem photography. Therefore, I digitally modified the photos, closing the eyes in each one to express the imagery of death. This choice echoes Roland Barthes' insight on the connection between photography and death, that the living, while being photographed and becoming a photograph, has become an irretrievably deceased person in the photograph. Paradoxically, there is a discrepancy between the presence of the subjects in the photographs and their state of being in the present moment, which makes it seem that the documented photographs of the past sometimes fail to fully validate the identity of the here and now.\n\n| 1/7",
+       "textEn": ""
+      },
+      {
+       "title": "撒泡尿照照自己",
+       "titleEn": "Piss on the Ground and Look at My Face in the Puddle",
+       "slug": "piss",
+       "layout": "slideshow",
+       "style": {},
+       "images": [
+        {
+         "src": "/images/piss-1.jpg",
+         "caption": "",
+         "captionEn": ""
+        }
+       ],
+       "text": "\"Piss on the Ground and Look at My Face in the Puddle\" is a Chinese common saying often used to mock people who fail to notice their own flaws. This expression not only carries a critical tone but also implies the importance of self-awareness. It essentially has a metaphor encouraging people to self-reflect. It's worth noting that the English term \"narcissism\" comes from the Greek myth of Narcissus, who was infatuated with his own reflection in the water. This myth shares some similarities with the Chinese common saying.\n\nAlthough both are influenced to some extent by cultural context, they share an emphasis on the importance of self-awareness and scrutiny. On the basis of these reflections, I attempted a mimetic act—after peeing, I gazed at my reflection in the urine and took a selfie. This act was both a flirtation with narcissism and a symbolic expression of self-reflection, with a slight hint of self-deprecation.",
+       "textEn": ""
+      }
+     ]
+    },
+    {
+     "title": "绘画",
+     "titleEn": "Painting",
+     "style": {},
+     "pages": []
+    }
+   ]
+  },
+  {
+   "title": "文本",
+   "titleEn": "Texts",
+   "style": {},
+   "pages": [
+    {
+     "title": "五十知天命",
+     "titleEn": "Fifty to Know the Fate",
+     "slug": "interview",
+     "layout": "slideshow",
+     "style": {},
+     "images": [],
+     "text": "《New Philosopher》 issue 26 Nov. 2019 issue 26 Photographer/Interviewee: Gao Rongguo Interviewer: Zan Boag Zan Boag： What prompted you to undertake the series of photographs in your work 'Identical Twins’? Rongguo Gao ： I was born in Shandong province and went to two primary schools, two middle schools, and five high schools.Sometimes, just when I had adapted to an environment, I then had to go to another place. Most people knew me during the transfer period; however, it was very ; for me to remember everyone. What impressed me most was that there were three pairs of twins among my classmates and each of them had a different fate.\n\nOne of the twins went to college but the other one kept trying for more than ten years but still failed.People often compared them and there is no doubt that it would bring strong pressure to their lives. This is my basic memory of the twins I know. In 2005,during which I was experiencing the torturous college entrance examination preparation, upon the recommendation of others I read The History of Western Philosophy, which discusses St Augustine's statement in Confessions, using the fates of twin brothers to criticise astrology- and it was really fascinating to me. It was not an original argument by St.Augustine, but derived from the Greek skeptic Carneades,one of the leaders in Plato's garden, who said, People born at the same time, differ in temperament and fate.\"\n\nWhen I entered college, I noticed that many people around me were attracted by astrology, so that their understanding of other people was entirely preconceived. I inevitably fall into a certain constellation, which is certainly not as honourable as a star being named after you. If we see in this way, then our natures have all been determined since we were born. Therefore, I wanted to do a project based on twins, whose ages were limited to being older than 50 years old, to find out how they had changed. In fact, I learnt this from a saying of Confucius's: “Fifty to know the fate.\" There are different explanations about fate, but the fifties is often called the time to know what it is.\n\nPeople always thought that my work should have been a documentary. However, I do not know what is more real. With photography it is difficult to be exactly 'real'. For example, if you add up or take away the exposure only for a little bit, you would get two results;looking up or looking down would produce different feelings. So it is hard to tell what is real and what is not. What you see is nothing other than a phenomenon. All I could do is to process the objective thing in a subjective way. That being said, even if what the audience sees from my work is not exactly what I expected, an explanation isn't necessary because a misreading is not necessarily a bad thing.\n\nTopics on twins are clichés as many artists have already used them as material for their creation. Choosing this topic does not make it innovative, and although many objected, I still decided to give it a try. I believe it is like cooking - it would be acceptable if I made the same dish in a different way. After a number of repetitive experiments, I determined the form of my work: face- -to-face. However, does the form really matter? During the returning visits, models refused to accept the pictures I took from side-on. It made me feel that I did something interesting. Perhaps it is related to our culture.\n\nIn fact, this face-to-face form is very common in Italy. Some portraits of couples follow this form and some people still adhere to this tradition even now. Face-to-face is more like seeing yourself in the mirror - regarding people as a mirror, one could know what he or she has owned or lost and could see himself or herself. This project has been going since January 16, 2011 and doing quick tours of 511 different villages has given me a different experience. Zan Boag：In referring to your series of photographs and fate, you quote Greek philosopher Carneades: \"People born at the same time, differ in temperament and fate.\"\n\nTo what degree did you find that the fates of the twins in your photographs differed? Rongguo Gao ： There are different degrees of difference, big and small.At first, they may look very similar, but twins are always two different people. They will have independent ideas, different personalities and habits, different perspectives on things,and their life experiences will not be exactly the same. For example, some have become disabled in accidents, causing hunchbacks; some have not married; some have been raised by other families since childhood;some need to take care of their children with Down's syndrome; others have already died.\n\nEspecially for women, marrying different families will defnitely make a difference. Zan Boag： You also quote Confucius to explain why you chose older twins: \"Fifty to know the fate\". Do you think we can tell how a person has lived from their face at fifty? Rongguo Gao ： It is difficult to tell how a person has lived from a person's expression. It is even more difficult to understand а person's life through a photo. For example, the models in the paintings or the actors in the movies, they make people look a certain way, just role- playing, and this does not rule out a lot of deception. Zan Boag：Inevitably people change over the course of their lives, from birth to death.\n\nAre we able to control who we become? Rongguo Gao ： We may play different roles in our lives. It is not so easy to acquire the identity of our dreams. It is even more dificult to direct your life. There are many unpredictable things in life. Zan Boag：Do you think our life cbances are determined by our family, our genetic makeup, our environment, or a combination of these factors? Rongguo Gao ： I think it is determined by a combination of these factors. The problem of nature versus nurture is always the focus of debate. When we are born, we are not equal. In societies with caste and class differences, some people lose their rights simply because of their background.\n\nTheir race, gender, or religion deprives them of important life opportunities. Therefore, the influence of our environment can not be ignored. Even in an equal society, we will still face the problem of being judged, and there is not necessarily an opportunity to be treated fairly everywhere. From a nature' perspective, ordinary families might give birth to a genius, but genius children might be extremely ordinary.If you pursue the best' genes blindly, you will face a huge problem, that is: Wbat is perfect? We can't achieve perfection. If others' innate conditions are not good, we can provide corresponding help, create a good environment, and let them have better opportunities.\n\nAfter all, none of us in this world exists in isolation. Zan Boag： Your photos, of course, focus on physical differences. To what extent do you think the twins lives have been different from an emotional and psychological perspective? Rongguo Gao ： Although I photographed them, I don't know much about them. I can tell one thing: in the process of shooting, some of the identical twins were relatively nervous,and they were in a hostile state :for a long time. They were not willing to take a group photo together. Therefore, I finally took the format of face- to-face separation, so that the two people looked like they were facing each other.\n\nI sometimes think that in life, would identical twins be upset with people treating them as one person? Would they deliberately distinguish themselves from one another? Zan Boag： English writer Neil Gaiman said that “wherever you go, you take yourself with you.” Do you think we are stuck with the person we are, or can we change who we are? Rongguo Gao ： It is not easy to know yourself. Situations will affect the way we think about ourselves to some extent. Although an understanding of ourselves can be obtained through the opinions of others, we will inevitably deviate from our own interpretation and external evaluations of who we are.\n\nWe constantly change our identity in our lives, either actively or passively, and even after death, our identity will change. The unchanging self does not exist. Our bodies, hearts, emotions, and even quirks, they are constantly changing, but to some extent, I am the same, I am still the same. This is a problem that has plagued humanity for many years. Am I the same person I used to be? Just like the classic Ship of Theseus, when all the old parts were changed, was it still the original ship? Reorganising the old parts into an identical ship, also called 'the ship',is that one the real ship? Looking back to ourselves, we could lose our memories, we could dress up as others, we could transplant other people's brains, we could undergo sex-change surgery, and the whole body's cells could be updated again...\n\nIs there is a critical point at which we change? Is it not me? 《新哲人》 issue 26 2019年11月刊 第26期 Zan Boag：是什么促使你拍摄了《同卵双胞胎》这一系列的照片? 高荣国： 我出生在山东，上过2 所小学、2所初中、5所高中，有时刚对一个环境适应，就又必须去另一个地方，在转学过程中，被大多数人所认识，而我却很难记住所有人。印象比较深的是，我的同学中有3对双胞胎，每对都有不同的命运，有的其中一个上了大学，另一个坚持了10多年也没有考上，人们时常拿他们作对比,当然,这会给他们的生活造成巨大压力。以上算是我对所认识的双胞胎的一些记忆。2005 年，当时我还在痛苦的复读生活中，经人推荐，读了西方哲学史，里面描述圣.奥古斯丁在《忏悔录》和《上帝之城》中用孪生兄弟问题大事抨击占星学的故事对我有极强的吸引力，考上大学后，发现周围的人好多都喜欢“星座”，与人交往时也用这个理论去做判断,对人的理解完全是先入为主的。我不可避免的被归入某一星座,这当然不是把某个星星用你的名字命名那样让人觉得很光彩的事，按这种判断，也许一个人从出生就被定性了……于是，我想做一个关于双胞胎的课题，把年龄锁定在50岁以上，找寻他们的变化。实际上借用了孔子的“五十而知天命”，天命有不同的解释，但五十岁通常被称为知命之年。总有人认为我的作品应当是纪实的，我不懂什么是纪实，更不懂什么更真实。\n\n摄影本来就很难真实，曝光加一点或减一点，我们得到两个结果，仰视俯视又是不同的感觉，很难说哪个给你的是真实的，我们看到的只是个现象。我能做的,都是对客观的东西做主观的处理，即使观众从作品得到的并非都是我所预想的，那我也不需要太多解释,误读不一定是坏事。 双胞胎其实是一个比较老套的题目，有很多艺术家拿他们当素材进行创作，我选这个命题并没有多少新意，尽管当时遭到了大部分人的反对,但我还是决定去试试。我觉得这像做菜,同样的菜，我做出不一样的味道也算能接受吧。 经过反复的实验后，我确定了现在作品的形式—面对面,那形式到底重不重要呢?在回访的时候，有的模特拒绝接受我拍的侧面照片,这反而让我觉得自己做了一件有意思的事。也许这与我们的文化有关，其实这种面对面的形式在意大利很常见，有些夫妻像就是这样的，现在有的还在坚持这种传统。面对面更像是在照镜子，“以人为镜，可以知得失，照见自己”。这个项目自2011年1月16日开始拍摄至今，匆匆忙忙的调查了511个村子，给了我一个不一样的经历。当这个作品完成后，突然感觉跟余光中的《乡愁》有些类似，“这头” 、“那头”、“坟墓”、“外头”、“里头”···· 乡愁 作者：余光中 小时候， 乡愁是一枚小小的邮票， 我在这头， 母亲在那头。 长大后， 乡愁是一张窄窄的船票， 我在这头， 新娘在那头。 后来啊， 乡愁是一方矮矮的坟墓， 我在外头， 母亲在里头。 而现在， 乡愁是一湾浅浅的海峡， 我在这头， 大陆在那头 Zan Boag：在谈到你的一系列照片和命运时，你引用希腊哲学家卡涅阿德斯的话:“同一时刻出生的人，其气质命运迥然不同。”\n\n你发现照片中双胞胎的命运有多大程度上的不同? 高荣国： 不同程度的不同，有大有小。起初可能长相极为相似，但双胞胎始终是两个不同的人。他们会有独立的想法、不同的个性与习惯、对事情的理解角度有所差异，生活上的经历也不可能完全相同。比如，有的在事故中变成了残障人，一直未婚；有的从小就被别的家庭分开抚养长大；有的需要照顾自己患有唐氏综合征的孩子；有的则因为某种原因已经死亡了······尤其对于女性来说，嫁到不同的家庭，肯定会有差异。 Zan Boag：你引用孔子的话来解释为什么选择年长的双胞胎,你认为我们能从一个人50岁时的面貌看出他过得怎么样吗? 高荣国： 从一个人的表情来分辨他是如何生活的，似乎有些困难，通过一张照片来了解一个人的一生，更是困难。比如绘画作品中的模特或者是电影中的演员，他们让人看起来是某种样子，只是角色扮演，不排除有很大的欺骗性。 Zan Boag：在人的一生中，从出生到死亡，不可避免地会发生变化。我们能控制自己成为什么样的人吗? 高荣国： 我们一生中可能会扮演不同的角色，去获取一个自己梦想的身份并不是那么容易，想保有终生更是难上加难,生命中有许多不可预料的东西。 Zan Boag：你认为我们的生活机会是由我们的DNA.我们的基因组成，我们的环境，还是这些因素的组合决定的? 高荣国： 我认为是这些因素组合决定的。先天和后天的问题，一直是争论的焦点。希特勒时期，纳粹医生用双胞胎做实验，想看看先天和后天到底哪一个更重要，当时忽略了同卵和异卵的区别，很多人当了实验品。\n\n讽刺的是，现在有个犹太科学家，也在做双胞胎实验，涉及表观遗传学啊行为遗传学啊等等，有的具体到，双胞胎住上下铺会不会影响他们的命运。我们一出生就是不平等的，甚至在有种姓和等级差别的社会中，有些人会仅仅因为他们的出生背景就失去各种权利。他们的种族、性别或宗教，使得他们被剥夺了重要的生活机会.因此，后天环境的因素不可忽视。即使在机会平等的社会，我们也会面临评判标准的问题，能力并不是在哪里都能够享受公平对待。仅从先天的角度来看，普通的家庭可能会生出天才，天才的孩子却有可能极其普通。如果一味的追求优秀基因，就会面临一个巨大的问题，那就是什么是完美。我们不可能达到完美。别人的先天条件不好，我们可以提供相应的帮助，营造一个好的环境，让他们有更好的机会，毕竟我们任何人在这个世界上都不是孤立存在的。 Zan Boag：当然，你的照片注重的是身体上的差异。从情感和心理角度来看，你认为这对双胞胎的生活有多大程度的不同? 高荣国： 虽然我拍摄过他们，但了解的也不是很多。我可以讲一件事，在拍摄的过程中，有的同卵双胞胎之间关系比较紧张，长期处在敌对状态中，不愿意在一起合影。因此，我最后采取了面对面分开的形式，让两个人看起来既像是对视，又像是对峙。我有时候想，在生活中，同卵双胞胎会不会很反感人们把他们当成一个人呢？会不会刻意与对方拉开区别呢？ Zan Boag：英国作家尼尔盖曼说过:“无论你走到哪里，你都带着你自己。”\n\n你认为我们是被我们是谁束缚住了，还是我们能改变我们是谁? 高荣国： 认识自己并不是一件容易的事，情境在某种程度上会影响我们看待自我和思考自我的方式。虽然我们对自己的了解可以通过他人对我们的看法来获得，但是，我们对自己的评价和外界对我们的评价，不可避免地会有偏差。我们在生活中不断变换身份，或主动或被动，甚至死后身份也会改变。一成不变的自己是不存在的。我们的肉体、心灵、情感，甚至怪癖，它们也时刻在变化，然而从某种程度上说，我又是不变的，我还是一样的我。这就要面对一个困扰人类很多年的问题，那过去的我和现在的我是不是同一个人?就像经典的忒修斯之船问题，当所有的旧零件都换了，那还是不是原来那艘船?将旧零件重新组成一艘一模一样的船，也命名为忒修斯船，那到底哪艘才是真正的忒修斯船?回到我们自身，我们可能会失去记忆，可能会整容成别人的模样，可能会移植别人的大脑，可能会做变性手术，可能全身细胞都会更新一遍......如果存在 一个临界点，我们改变到哪里才算不是我了?",
+     "textEn": ""
+    },
+    {
+     "title": "一幅照片",
+     "titleEn": "A Photograph",
+     "slug": "essay",
+     "layout": "slideshow",
+     "style": {},
+     "images": [],
+     "text": "一幅照片\n\n文/冯君蓝\n\n高荣国特地在山东老家，动用亲族网络，找出一双双五十岁以上，达知天命之年的同卵双胞胎,继之，安排每组双胞胎在同一场景分别拍摄下他们的侧面肖像，然后如同照镜子般，使两幅肖像面对面地结合在一块，借以在对照中，反映出即使在相同的基因，相同的血型、生辰八字、生肖、星座，乃至相同的原生家庭、相同的前期成长环境等等条件底下，但毕竟分立的两个个体，两个相异的灵魂，呈显他们在经历复杂的生命过程、各自心理的抉择与转折、无可避免的分歧发展、各别的经验积累，最终对个体生命乃至形貌的影响变化。但这组肖像作品的魅力，还不仅在于荣国希望通过 科学面相学式的观察，对不论东西方传统的星相命相学中，强调个体的命运受制于所从出的生辰，所属的生肖、星座的宿命观提出质疑。也在于荣国所照现的这一双双典型的中国脸谱，却实行了15世纪意大利画家弗兰契斯卡(Piero della Francesca，1415~1492）的肖像型式和美学风格；同样朴素而庄严的构图和人物表情，同样转九十度侧脸侧身的半身相，同样以被拍摄被描绘的主人公的生活所在地的地貌作为肖像背景，并且肖像与其背景虽有主从之别，各自占据画面面积的比例却相当；似乎暗示着人与其所属的背景环境彼此牵系相互影响的状态是势均力敌的。就某个层面而言你可以说人是环境的产物，但就另一层面而言,环境又被人所塑造着，你很难定论两者究竟谁对谁的影响更大一些。这致令观照者被引导进入对人的本质性的讨论。\n\n其实不论是中国的儒道传统或是希腊跳脱民间神话的哲学传统，以及基督教《圣经》的神学，都看出人性与自然内蕴着并且受制于更高的终极实在因子和影响。时间、天体的运行、自然世界与人平行，不过都是受造界的一环，都不是绝对的，因此也就没有绝对的自主性与主宰性。对人命运的关切，与其诉诸遥远的星星和出生的时辰，不如思索人与一切万有所从出的道与天命。\n\n《生活月刊》2014年10月刊别册\n\nA Photograph\n\nWritten by Stanley Fung\n\nGao Rongguo went to his hometown in Shandong province and used his network of relatives to find pairs of identical twins who were over fifty years old and had reached a significant stage in their lives. He then arranged for each pair to take a side-profile portrait in the same setting. These portraits were then combined face-to-face, as if looking into a mirror, in order to reflect on the comparison of two individuals who share the same genes, blood type, date and time of birth, zodiac sign, and even the same upbringing and early environment. Despite these identical conditions, the two individuals inevitably differ due to the complex life experiences they have undergone, their individual psychological choices and turning points, unavoidable differences in development, and accumulation of personal experiences, which ultimately affect their individual lives and appearances.\n\nThe charm of this portrait series not only lies in Gao Rongguo's desire to question the belief in fate that is emphasized in both Western and Eastern traditional astrology, which suggests that an individual's destiny is predetermined by their birth date, zodiac sign, and star constellation. It also lies in the fact that these typical Chinese faces, captured by Gao Rongguo's camera, employ the portrait style and aesthetic of Italian painter Piero della Francesca (1415-1492) from the 15th century. The simple yet dignified composition and facial expressions of the subjects, the half-body shot turned ninety degrees to the side, and the landscape of the subject's living environment serving as the background of the portrait are all similar to the style of Piero della Francesca's portraits. Although the portrait and its background have a hierarchical relationship, they occupy similar proportions in the picture, suggesting that the relationship between a person and their environment is a mutually influential state of equal power. On one level, it can be said that a person is a product of their environment, but on another level, the environment is shaped by people, making it difficult to determine which has a greater influence on the other. This leads the viewer into a discussion of the essence of humanity.\n\nIn fact, whether it is the Confucian and Taoist traditions of China, the philosophical tradition of ancient Greece that transcends folk myths, or the theology of the Bible, all recognize that human nature is imbued with and subject to higher ultimate realities and influences within nature. Time, the movement of celestial bodies, the natural world, and humans all exist as part of the created world and are not absolute, and therefore, lack absolute autonomy and dominion. Concern for human destiny is better explored by contemplating the relationship between humanity and the Dao and fate that originate from all things.\n\nExcerpt from the October 2014 issue of Life Magazine.",
+     "textEn": ""
+    }
+   ],
+   "categories": []
+  },
+  {
+   "title": "展览",
+   "titleEn": "Exhibition",
+   "style": {},
+   "pages": [
+    {
+     "title": "现场",
+     "titleEn": "Installation views",
+     "slug": "views",
+     "layout": "grid",
+     "style": {},
+     "images": [
+      {
+       "src": "/images/views-01.jpg",
+       "caption": "Altonaer Museum, Germany",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-02.jpg",
+       "caption": "Altonaer Museum, Germany",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-03.jpg",
+       "caption": "Altonaer Museum, Germany",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-04.jpg",
+       "caption": "National Portrait Gallery, London",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-05.jpg",
+       "caption": "Wuhan Photo Fair",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-06.jpg",
+       "caption": "Dong Gang Museum of Photography",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-07.jpg",
+       "caption": "National Library, Singapore",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-08.jpg",
+       "caption": "Mingsheng Art Museum, Beijing, China",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-09.jpg",
+       "caption": "PHODAR Biennial",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-10.jpg",
+       "caption": "La RATP invite",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-11.jpg",
+       "caption": "La RATP invite",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-12.jpg",
+       "caption": "PHOTOQUAI photography biennial",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-13.jpg",
+       "caption": "PHOTOQUAI photography biennial",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-14.jpg",
+       "caption": "PHOTOQUAI photography biennial",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-15.jpg",
+       "caption": "Sotheby's, London, UK",
+       "captionEn": ""
+      },
+      {
+       "src": "/images/views-16.jpg",
+       "caption": "Sotheby's, London, UK",
+       "captionEn": ""
+      }
+     ],
+     "text": "",
+     "textEn": ""
+    }
+   ],
+   "categories": []
+  },
+  {
+   "title": "关于",
+   "titleEn": "About",
+   "style": {},
+   "pages": [
+    {
+     "title": "简历",
+     "titleEn": "CV",
+     "slug": "cv",
+     "layout": "slideshow",
+     "style": {},
+     "images": [],
+     "text": "GAO RONGGUO\nGao Rongguo was born in 1984 in Binzhou, Shandong, China, and graduated from the Central Academy of Fine Arts in 2012. His work has been exhibited internationally, with venues including the National Portrait Gallery, Quai Branly Museum, CAFA Art Museum, Chongqing Art Museum, Today Art Museum, Dong Gang Museum of Photography, Sotheby's Gallery, Changjiang Museum of Contemporary Art, and Beijing Mingsheng Art Museum. His work has been featured in TIME, The Huffington Post, DailyMail, Vanity Fair, La Repubblica, Esquire, Feature Shoot, Der Greif, and Rheinische Post Online. He is a recipient of the Today Art Museum's Liu Yi Award (2012), the PHODAR Biennial's Grand Prize (2015), a nomination for the Taylor Wessing Photographic Portrait Prize (2020), a nomination for the Prix Pictet (2023), and was shortlisted for the John Moore's Painting Prize (China) (2024). In addition, he was invited to serve as the co-curator of the British Press Photographers' Association (BPPA) in 2021.\nGroup Exhibition\n2025\n8th John Moore's Painting Prize (China) Exhibition, TAG Art Museum, Qingdao, China\n8th John Moore's Painting Prize (China) Exhibition, Shanghai Jiushi Art Museum, Shanghai, China\n2022\nHamburg Portfolio Reviews, Altonaer Museum,Hamburg, Germany\nThe 2/22/22 Exhibition: Pairs and Diptychs, Lenscratch\n2021\nHead on Photo Festival, Paddington Reservoir Gardens, Sydney, Australia\n2020\nTaylor Wessing Portrait Prize, National Portrait Gallery, London\nIndian Photo Festival,State Art Gallery, Hyderabad,Indian\n2018\nKolga Tbilisi Photo 2018, Tbilisi, Georgia\n2017\nRules of translation，Flypig art space，Beijing,China\n2016\nFrom East To West，Karlsruhe University of Arts and Design, Karlsruhe, Germany\nSingapore International Photography Festival\n,Open Plaza, National Library, Singapore\n2015\nESPY Photography Award 2015,Elysium Gallery,Swansea,UK\nPhoto Kathmandu,Nagbahal,Patan,Nepal\n14th Dong Gang International Photo Festival,Dong Gang Museum of Photography,Yeongwol-gun,Korea\nThe Civil power,Mingsheng Art Museum,Beijing,China\nCircle Art Youth Award,Circle Art center,Shenzhen,China\nPHODAR Biennial,Iliya Beshkov Art Gallery,Pleven,Bulgaria\nThe First edition of Changjiang International Photography&Video Biennial,Changjiang Museum of contemporary Art, Chongqing, China\n2014\nMultidimensional —Scatter explore in Broken Age,Lotus Art Museum,Beijing,China\nPhotovisa Festival,Krasnodar,Russia\nWHO I AM—The 14th Pingyao International Photography Festival,Pingyao,China\n2013\nLa RATP invite,Palais Royale Musee du Louvre station, Paris,France\nPHOTOQUAI photography biennial,Quai Branly Museum,Paris,France\n2012\nLuo Zhongli Scholarship Exhibition,Chongqing Art Museum , Chongqing, China\nUnfolding landscapes,Sotheby's ,London,UK\nAnnual Nomination Exhibition for Students of Contemporary Art Academies,Today Art museum,Beijing,China\nThe Start of a Long Journe,CAFA Art Museum，Beijing,China\nStruggle, Royal Academy of Art,The Hague ,Netherlands\nStruggle - Caochangdi Photospring 2012 · Arles in Beijing，Beijing,China\n2011\nQi Tu Shi Chu,CAFA Art Museum, Beijing,China\nAwards\n2023\nNominee,Prix Pictet Award\n2020\nShortlisted, TaylorWessing Photographic Portrait Prize , National Portrait Gallery ,London\n2015\nGrand Prize,PHODAR Biennial,Iliya Beshkov Art Gallery,Bulgaria\n2014\nEmerging Talent Jury Winner,EYETIME 2014,New York,USA\n2012\nElinchrom Award,Graduation Show of Central Academy of Fine Arts , Beijing, China\nPresident 's Nomination Award,Graduation Show of Central Academy of Fine Arts , Beijing,China\nLiu Yi Award,Annual Nomination Exhibition for Students of Contemporary Art Academies ,Today Art Museum,Beijing,China\nSelected Press\nLa Repubblica, “\nCina, gemelli allo specchio: le differenze dopo 50 anni\n”, by Agnese Fioretti, June10, 2014\nEsquire, “\nКак взрослеют близнецы\n”, May 22 , 2014\nRP-ONLINE.de , “\nSo ähnlich sehen sich Zwillinge im Alter\n”, by Trauriges Ende eines Fotoprojekts ,April 10, 2014\nThe Washington Post , “\nPowerful portraits of aging identical twins\n”, April 4, 2014\nVanity Fair, “\nGemelli identici\n”, by Greta Privitera , April 2, 2014\nTIME, “\nSee the Dramatic Differences Between Identical Twins Over Time\n”, by Kyle Chayka , April 1, 2014\nThe Huffington Post,“\nStunning Photos Of Identical Twins As Grown-Ups Show How Fate Takes Its Course\n”, by Priscilla Frank , March 31, 2014\nThe Daily Mail,“\nDouble take: Poignant portraits of 50-year-old identical twins reveal how differences in lifestyle have affected the way they age\n”, by Annabel Fenwick Elliott , March 27, 2014\nBibliography\nSandrine Kerfante，\nTwo of a Kind\n，Chronicle Books 2016，p.4-5\n高荣国\n1984年出生于中国山东滨州，2012年毕业于中央美术学院。\n高荣国的作品得到广泛展出，包括法国盖布朗利博物馆、英国国家肖像馆、韩国东江摄影博物馆、德国阿尔托纳博物馆、今日美术馆、中央美术学院美术馆、北京民生现代美术馆、重庆美术馆和英国苏富比画廊等，他的作品刊登评论于众多出版物，如美国《TIME（时代周刊）》、《The Washington Post（华盛顿邮报）》、法国《解放报》、英国《The Daily Mail（每日邮报）》、德国《莱茵邮报》、俄罗斯《Esquire（君子）》杂志、意大利《Vanity Fair（名利场）》以及《中国摄影》等。高荣国曾获得今日美术馆刘溢奖（2012）、PHODAR双年展最高奖（2015）、泰勒·韦新肖像摄影奖（Taylor Wessing Photographic Portrait Prize ）提名（2020）以及皮克泰奖（Prix Pictet）提名（2023）等。此外，他还曾受邀担任英国新闻摄影师协会（BPPA）的联合策展人（2021）。\n群展：\n2025\n第八届约翰·莫尔绘画奖（中国）作品展，西海美术馆，青岛，中国\n第八届约翰·莫尔绘画奖（中国）作品展，上海久事美术馆，上海，中国\n2021\nHead on 摄影节，帕丁顿水库花园，悉尼，澳大利亚\n2020\n泰勒·韦新肖像奖，国家肖像画廊，伦敦，英国\n印度摄影节，海得拉巴，印度\n2018\n第比利斯摄影节，第比利斯，格鲁吉亚\n2017\n转译伦当代艺术展，飞猪空间，北京\n2016\n从东到西，卡尔斯鲁厄国立造型艺术大学，德国\n新加坡国际摄影节，国家图书馆，新加坡\n2015\n东江国际摄影节，东江摄影博物馆，宁越，韩国\n民间的力量，北京民生现代美术馆，北京，中国\n突围•首届圈子艺术青年奖作品文献展，圈子艺术中心， 深圳，中国\nPHODAR 双年展， Iliya Beshkov 画廊，普列文，保加利亚\n首届长江国际影像双年展，长江当代美术馆，重庆，中国\n2014\n多向度:破碎时代的散点探索，万荷美术馆，北京，中国\nPhotoVisa，克拉斯诺达尔，俄罗斯\n2013\nLa RATP invite，卢浮宫地铁站，巴黎，法国\n第四届 PHOTOQUAI 双年展，盖布朗利博物馆，巴黎，法国\n2012\n远景，苏富比画廊，伦敦，英国\n罗中立奖学金获奖作品展，重庆美术馆，重庆，中国\n当代艺术院校大学生年度提名展，今日美术馆，北京，中国\n千里之行，中央美术学院美术馆，北京，中国\n“纠结”群展，荷兰皇家美术学院，海牙，荷兰\n“纠结”群展-2012年草场地摄影季-阿尔勒在北京，北京，中国\n2011\n其土石出，中央美术学院美术馆，北京，中国\n荣誉\n2023\n提名，Prix​​ Pictet摄影奖，瑞士\n2020\n提名，泰勒·韦辛肖像摄影奖，英国\n2015\n特等奖，PHODAR 双年展，Iliya Beshkov 画廊，保加利亚\n2014\n评委特别奖，EYETIME ，纽约，美国\n2012\n刘溢奖，当代艺术院校大学生年度提名展，今日美术馆，中国\n瑞士爱玲珑奖，中央美术学院毕业展，北京，中国\n院长提名奖，中央美术学院毕业展，北京，中国\n媒体:\n意大利《La Repubblica（共和国报）》\nLa Repubblica, “Cina, gemelli allo specchio: le differenze dopo 50 anni”, by Agnese Fioretti, June10, 2014\n俄罗斯《Esquire（君子）》杂志\nEsquire, “Закончить с отличием”, May 22 , 2014\n德国《莱茵邮报》\nRP-ONLINE.de , “So ähnlich sehen sich Zwillinge im Alter”, by Trauriges Ende eines Fotoprojekts ,April 10, 2014\n《The Washington Post（华盛顿邮报）》\nThe Washington Post , “Powerful portraits of aging identical twins”, April 4, 2014\n意大利《Vanity Fair(名利场)》\nVanity Fair, “Gemelli identici”, by Greta Privitera , April 2, 2014\n《TIME（时代周刊）》\nTIME, “See the Dramatic Differences Between Identical Twins Over Time”, by Kyle Chayka , April 1, 2014\n《The Huffington Post（赫芬顿邮报）》\nThe Huffington Post , “Stunning Photos Of Identical Twins As Grown-Ups Show How Fate Takes Its Course”, by Priscilla Frank , March 31, 2014\n英国《The Daily Mail（每日邮报）》\nThe Daily Mail , “Double take: Poignant portraits of 50-year-old identical twins reveal how differences in lifestyle have affected the way they age”, by Annabel Fenwick Elliott , March 27, 2014",
+     "textEn": ""
+    },
+    {
+     "title": "联系",
+     "titleEn": "Contact",
+     "slug": "contact",
+     "layout": "slideshow",
+     "style": {},
+     "images": [],
+     "text": "电子邮件：345470797@qq.com\n微信：rongguogao\n手机：[+86 15101160833](tel:+8615101160833)\nInstagram：[@rongguogao](https://www.instagram.com/rongguogao/)\nFacebook：[gaorongguo](https://www.facebook.com/gaorongguo)",
+     "textEn": "Email: 345470797@qq.com\nWeChat: rongguogao\nPhone: [+86 15101160833](tel:+8615101160833)\nInstagram: [@rongguogao](https://www.instagram.com/rongguogao/)\nFacebook: [gaorongguo](https://www.facebook.com/gaorongguo)"
+    },
+    {
+     "title": "媒体",
+     "titleEn": "Press",
+     "slug": "press",
+     "layout": "slideshow",
+     "style": {},
+     "images": [],
+     "text": "[Singapore International Photography Festival](http://sipf.sg/identical-twins/)\n[](http://sipf.sg/identical-twins/)\n[Cina, gemelli allo specchio: le differenze dopo 50 anni](http://www.repubblica.it/esteri/2014/06/09/foto/cina_gemelli_allo_specchio_le_differenze_dopo_50_anni-88513924/1/#1)\n[Как взрослеют близнецы](https://esquire.ru/hero/5148-identical-twins/)\n[So ähnlich sehen sich Zwillinge im Alter](https://rp-online.de/kultur/kunst/so-aehnlich-sehen-sich-zwillinge-im-alter_aid-20442317)\n[Powerful portraits of aging identical twins](https://www.washingtonpost.com/lifestyle/style/powerful-portraits-of-aging-identical-twins/2014/04/04/8a0d4650-bbe0-11e3-9a05-c739f29ccb08_gallery.html?noredirect=on&utm_term=.2f6fcd652292)\n[Gemelli identici](https://www.vanityfair.it/news/societ%C3%A0/14/04/02/foto-gemelli-identici-cina-gao-rongguo)\n[See the Dramatic Differences Between Identical Twins Over Time](http://time.com/45301/see-the-dramatic-changes-of-these-identical-twins-over-time/)\n[Stunning Photos Of Identical Twins As Grown-Ups Show How Fate Takes Its Course](https://www.huffingtonpost.com/2014/03/30/gao-rongguo_n_5030091.html)\n[Double take: Poignant portraits of 50-year-old identical twins reveal how differences in lifestyle have affected the way they age](http://www.dailymail.co.uk/femail/article-2591087/Double-Poignant-portraits-50-year-old-identical-twins-reveal-differences-lifestyle-affected-way-age.html)\n[Two of a Kind](https://books.google.com.tw/books?id=oskHDAAAQBAJ&pg=PA4-IA1&lpg=PA4-IA1&dq=Gao+Rongguo+Two+of+a+Kind&source=bl&ots=R33HocqNA4&sig=aHs7fofwgNICn27FjyW_tQWcWHo&hl=en&sa=X&ved=0ahUKEwijzIrbrN_bAhWLQd4KHfdEC6UQ6AEIJzAA#v=onepage&q=Gao%20Rongguo%20Two%20of%20a%20Kind&f=false)",
+     "textEn": ""
+    }
+   ],
+   "categories": []
+  }
+ ]
+}
