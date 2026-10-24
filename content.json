@@ -19,7 +19,10 @@
     "menuColor": "#666666",
     "menuActive": "#000000",
     "textAlign": "justify",
-    "titleFont": "sans"
+    "titleFont": "sans",
+    "nameSize": -1,
+    "nameColor": "red",
+    "nameWeight": "bold"
   },
   "sections": [
     {
