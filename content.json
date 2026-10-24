@@ -1,6 +1,6 @@
 {
   "siteName": "高荣国",
-  "siteNameEn": "Rongguo Gao",
+  "siteNameEn": "RONGGUO GAO",
   "style": {
     "font": "sans",
     "fontSize": 12,
@@ -21,7 +21,9 @@
     "textAlign": "justify",
     "titleFont": "sans",
     "nameColor": "red",
-    "nameWeight": "bold"
+    "nameWeight": "bold",
+    "nameFont": "mono",
+    "nameSize": 26
   },
   "sections": [
     {
