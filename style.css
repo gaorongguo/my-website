@@ -32,3 +32,17 @@ p{margin:0 0 9px}.cap{font-size:var(--cfs);color:var(--cfg);margin:4px 0 0}
 #menu li,#menu details{padding-left:6px}#menu details li{padding-left:8px}
 #content{margin-left:calc(var(--mw) + 6px);padding:20px 12px 60px 6px}
 .work{display:block}.work .tx{margin-top:16px}.grid{gap:16px 10px}}
+/* v2: 对齐、网站名称/菜单/标题字体、放大查看 */
+#menu{font-family:var(--mff,var(--ff))}
+#menu .name{font-family:var(--nff,var(--mff,var(--ff)));font-size:var(--nfs,13px);color:var(--nfg,var(--mact));font-weight:var(--nfw,normal)}
+#menu .sec{font-size:var(--sfs,var(--mfs));color:var(--sfg,var(--mact))}
+h1{font-family:var(--tff,var(--ff))}
+.tx p,.doc p{text-align:var(--ta,justify);hyphens:auto;overflow-wrap:break-word}
+.view img,.grid img{cursor:zoom-in}
+.grid figure{width:var(--gw);max-width:100%}
+#lb{position:fixed;inset:0;z-index:50;display:none;flex-direction:column;align-items:center;justify-content:center;padding:44px 16px 16px;background:var(--bg);overflow:auto}
+#lb.on{display:flex}
+#lb img{display:block;max-width:94vw;max-height:76vh;width:auto;height:auto;cursor:pointer}
+#lb .lbc{width:100%;max-width:min(94vw,900px);margin-top:10px}
+#lb .x{all:unset;position:absolute;top:8px;right:14px;cursor:pointer;font-size:28px;line-height:1;color:var(--fg);padding:6px}
+#lb .x:hover{color:var(--hover)}#lb .x:focus-visible{outline:1px solid var(--hover)}
