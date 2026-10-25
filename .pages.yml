@@ -21,6 +21,9 @@ content:
       - name: "siteNameEn"
         label: "网站名称 English"
         type: "string"
+      - name: "homePage"
+        label: "首页显示哪一页（填页面的「网址标识」，默认 cv）"
+        type: "string"
       - name: "style"
         label: "全站样式（所有页面默认用这个；网站名称、菜单、正文的字体字号颜色都在这里）"
         type: "object"
@@ -166,13 +169,22 @@ content:
           - name: "gridWidth"
             label: "【页面】缩略图最大宽度（像素，如 220）"
             type: "number"
+          - name: "autoTrim"
+            label: "【页面】自动裁掉图片四周的白边（让图片顶端和文字对齐）"
+            type: "select"
+            options:
+              values:
+                - name: "yes"
+                  label: "是（默认）"
+                - name: "no"
+                  label: "否（保持原样）"
       - name: "sections"
-        label: "板块（左侧菜单的大标题，可随时添加）"
+        label: "板块（左侧菜单的大标题，可随时添加；每一项后面的「显示/隐藏」表示当前状态）"
         type: "object"
         list:
           collapsible:
             collapsed: true
-            summary: "{index}. {title}"
+            summary: "{index}. {title}　{status}"
         fields:
           - name: "title"
             label: "板块名称（中文）"
@@ -180,6 +192,16 @@ content:
           - name: "titleEn"
             label: "板块名称 English（选填）"
             type: "string"
+          - name: "status"
+            label: "显示状态（选「隐藏」=暂时不在网站上出现，随时可改回）"
+            type: "select"
+            default: "显示"
+            options:
+              values:
+                - name: "显示"
+                  label: "显示"
+                - name: "隐藏"
+                  label: "隐藏（暂时不显示）"
           - name: "style"
             label: "这个板块的样式（选填）"
             type: "object"
@@ -261,13 +283,22 @@ content:
               - name: "gridWidth"
                 label: "【页面】缩略图最大宽度（像素，如 220）"
                 type: "number"
+              - name: "autoTrim"
+                label: "【页面】自动裁掉图片四周的白边（让图片顶端和文字对齐）"
+                type: "select"
+                options:
+                  values:
+                    - name: "yes"
+                      label: "是（默认）"
+                    - name: "no"
+                      label: "否（保持原样）"
           - name: "pages"
             label: "直接放在这个板块下的页面"
             type: "object"
             list:
               collapsible:
                 collapsed: true
-                summary: "{index}. {title}"
+                summary: "{index}. {title}　{status}"
             fields:
               - name: "title"
                 label: "页面名称（中文）"
@@ -275,6 +306,16 @@ content:
               - name: "titleEn"
                 label: "页面名称 English（选填）"
                 type: "string"
+              - name: "status"
+                label: "显示状态（选「隐藏」=暂时不在网站上出现，随时可改回）"
+                type: "select"
+                default: "显示"
+                options:
+                  values:
+                    - name: "显示"
+                      label: "显示"
+                    - name: "隐藏"
+                      label: "隐藏（暂时不显示）"
               - name: "slug"
                 label: "网址标识（选填，英文或拼音，如 twins）"
                 type: "string"
@@ -293,7 +334,7 @@ content:
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "图片 {index}　{caption}"
+                    summary: "{index}. {caption}　{status}"
                 fields:
                   - name: "src"
                     label: "图片"
@@ -306,6 +347,16 @@ content:
                   - name: "captionEn"
                     label: "图片说明 English（选填）"
                     type: "string"
+                  - name: "status"
+                    label: "显示状态（选「隐藏」=暂时不在网站上出现，随时可改回）"
+                    type: "select"
+                    default: "显示"
+                    options:
+                      values:
+                        - name: "显示"
+                          label: "显示"
+                        - name: "隐藏"
+                          label: "隐藏（暂时不显示）"
               - name: "moreImages"
                 label: "批量添加图片（一次可选很多张，没有说明也行；显示在上面带说明的图片之后）"
                 type: "image"
@@ -314,11 +365,13 @@ content:
                   multiple:
                     max: 300
               - name: "text"
-                label: "正文（空一行=新段落；链接写成 [文字](网址)，网址和邮箱会自动变链接）"
+                label: "正文（用上方工具栏设置粗体、斜体、下划线、列表、链接；点 Source 可直接写 HTML）"
                 type: "text"
+                hidden: true
               - name: "textEn"
                 label: "正文 English（选填，网站切到英文时显示）"
                 type: "text"
+                hidden: true
               - name: "style"
                 label: "这一页的样式（选填，留空=跟随上一级）"
                 type: "object"
@@ -400,13 +453,22 @@ content:
                   - name: "gridWidth"
                     label: "【页面】缩略图最大宽度（像素，如 220）"
                     type: "number"
+                  - name: "autoTrim"
+                    label: "【页面】自动裁掉图片四周的白边（让图片顶端和文字对齐）"
+                    type: "select"
+                    options:
+                      values:
+                        - name: "yes"
+                          label: "是（默认）"
+                        - name: "no"
+                          label: "否（保持原样）"
           - name: "categories"
             label: "分类（板块下的子栏目，如 摄影、绘画、雕塑、装置；可随时添加）"
             type: "object"
             list:
               collapsible:
                 collapsed: true
-                summary: "{index}. {title}"
+                summary: "{index}. {title}　{status}"
             fields:
               - name: "title"
                 label: "分类名称（中文）"
@@ -414,6 +476,16 @@ content:
               - name: "titleEn"
                 label: "分类名称 English（选填）"
                 type: "string"
+              - name: "status"
+                label: "显示状态（选「隐藏」=暂时不在网站上出现，随时可改回）"
+                type: "select"
+                default: "显示"
+                options:
+                  values:
+                    - name: "显示"
+                      label: "显示"
+                    - name: "隐藏"
+                      label: "隐藏（暂时不显示）"
               - name: "style"
                 label: "这个分类的样式（选填）"
                 type: "object"
@@ -495,13 +567,22 @@ content:
                   - name: "gridWidth"
                     label: "【页面】缩略图最大宽度（像素，如 220）"
                     type: "number"
+                  - name: "autoTrim"
+                    label: "【页面】自动裁掉图片四周的白边（让图片顶端和文字对齐）"
+                    type: "select"
+                    options:
+                      values:
+                        - name: "yes"
+                          label: "是（默认）"
+                        - name: "no"
+                          label: "否（保持原样）"
               - name: "pages"
                 label: "这个分类里的页面（作品）"
                 type: "object"
                 list:
                   collapsible:
                     collapsed: true
-                    summary: "{index}. {title}"
+                    summary: "{index}. {title}　{status}"
                 fields:
                   - name: "title"
                     label: "页面名称（中文）"
@@ -509,6 +590,16 @@ content:
                   - name: "titleEn"
                     label: "页面名称 English（选填）"
                     type: "string"
+                  - name: "status"
+                    label: "显示状态（选「隐藏」=暂时不在网站上出现，随时可改回）"
+                    type: "select"
+                    default: "显示"
+                    options:
+                      values:
+                        - name: "显示"
+                          label: "显示"
+                        - name: "隐藏"
+                          label: "隐藏（暂时不显示）"
                   - name: "slug"
                     label: "网址标识（选填，英文或拼音，如 twins）"
                     type: "string"
@@ -527,7 +618,7 @@ content:
                     list:
                       collapsible:
                         collapsed: true
-                        summary: "图片 {index}　{caption}"
+                        summary: "{index}. {caption}　{status}"
                     fields:
                       - name: "src"
                         label: "图片"
@@ -540,6 +631,16 @@ content:
                       - name: "captionEn"
                         label: "图片说明 English（选填）"
                         type: "string"
+                      - name: "status"
+                        label: "显示状态（选「隐藏」=暂时不在网站上出现，随时可改回）"
+                        type: "select"
+                        default: "显示"
+                        options:
+                          values:
+                            - name: "显示"
+                              label: "显示"
+                            - name: "隐藏"
+                              label: "隐藏（暂时不显示）"
                   - name: "moreImages"
                     label: "批量添加图片（一次可选很多张，没有说明也行；显示在上面带说明的图片之后）"
                     type: "image"
@@ -548,11 +649,13 @@ content:
                       multiple:
                         max: 300
                   - name: "text"
-                    label: "正文（空一行=新段落；链接写成 [文字](网址)，网址和邮箱会自动变链接）"
+                    label: "正文（用上方工具栏设置粗体、斜体、下划线、列表、链接；点 Source 可直接写 HTML）"
                     type: "text"
+                    hidden: true
                   - name: "textEn"
                     label: "正文 English（选填，网站切到英文时显示）"
                     type: "text"
+                    hidden: true
                   - name: "style"
                     label: "这一页的样式（选填，留空=跟随上一级）"
                     type: "object"
@@ -634,6 +737,15 @@ content:
                       - name: "gridWidth"
                         label: "【页面】缩略图最大宽度（像素，如 220）"
                         type: "number"
+                      - name: "autoTrim"
+                        label: "【页面】自动裁掉图片四周的白边（让图片顶端和文字对齐）"
+                        type: "select"
+                        options:
+                          values:
+                            - name: "yes"
+                              label: "是（默认）"
+                            - name: "no"
+                              label: "否（保持原样）"
 settings:
   hide: true
   content:
