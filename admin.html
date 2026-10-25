@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>文字编辑器 · 高荣国网站</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font:14px/1.7 Verdana,"PingFang SC","Microsoft YaHei",sans-serif;color:#333;background:#f6f7f9}
+header{display:flex;gap:8px;align-items:center;padding:10px 16px;background:#fff;border-bottom:1px solid #e3e5e8;position:sticky;top:0;z-index:5;flex-wrap:wrap}
+header b{margin-right:auto}#msg{font-size:13px;color:#555;flex-basis:100%}
+.btn{border:1px solid #d0d3d9;background:#fff;border-radius:6px;padding:5px 12px;cursor:pointer;font:inherit}.btn.p{background:#2f6df6;border-color:#2f6df6;color:#fff}
+#app{display:flex;min-height:calc(100vh - 80px)}
+#tree{width:300px;flex:none;padding:14px;background:#fff;border-right:1px solid #e3e5e8;overflow:auto}
+#tree .s{font-weight:600;margin:12px 0 2px}#tree .c{margin:6px 0 2px 10px;color:#666}
+#tree .row{display:flex;align-items:center;gap:6px;margin-left:12px}
+#tree .pg{all:unset;cursor:pointer;flex:1;padding:1px 6px;border-radius:4px}#tree .pg:hover,#tree .on{background:#eaf1ff}
+#tree .st{border:0;border-radius:10px;font-size:12px;padding:0 8px;cursor:pointer;background:#e6f4ea;color:#256029}#tree .st.off{background:#eee;color:#888}
+#tree .off.t{opacity:.5;text-decoration:line-through}
+#ed{flex:1;padding:16px;min-width:0}#tabs{margin-bottom:8px}#tabs .btn.on{background:#eaf1ff;border-color:#9bb8f5}#cap{color:#666;margin-left:8px}
+#tb{display:flex;flex-wrap:wrap;gap:4px;align-items:center;padding:8px;background:#fff;border:1px solid #e3e5e8;border-radius:8px 8px 0 0}
+#tb button,#tb select{border:0;background:#f3f4f6;border-radius:5px;padding:4px 8px;cursor:pointer;min-width:30px;font:inherit}#tb button:hover{background:#e3e8f2}
+#tb label{display:inline-flex;align-items:center;gap:2px;background:#f3f4f6;border-radius:5px;padding:0 6px;height:28px;cursor:pointer}
+#tb input[type=color]{width:24px;height:22px;padding:0;border:0;background:none;cursor:pointer}#tb i{color:#ccc;font-style:normal}
+#area{min-height:440px;padding:18px 22px;background:#fff;border:1px solid #e3e5e8;border-top:0;border-radius:0 0 8px 8px;outline:0}
+#area p{margin:0 0 9px}#area ul,#area ol{margin:0 0 9px;padding-left:1.5em}
+dialog{border:1px solid #ccc;border-radius:10px;max-width:460px}dialog label{display:block;margin:10px 0}dialog input{width:100%;padding:6px;font:inherit}.hint{font-size:12px;color:#777}
+@media(max-width:800px){#app{display:block}#tree{width:auto;border-right:0;border-bottom:1px solid #e3e5e8}}
+</style></head><body>
+<header><b>文字编辑器 · 高荣国网站</b><button class="btn" id="set">设置</button><button class="btn" id="dl">下载备份</button><button class="btn p" id="save">保存并发布</button><div id="msg"></div></header>
+<div id="app"><aside id="tree"></aside>
+<section id="ed"><div id="tabs"><button class="btn on" data-f="text">中文 / 通用正文</button> <button class="btn" data-f="textEn">English 正文</button><span id="cap"></span></div>
+<div id="tb">
+<button data-c="undo" title="撤销">↶ 撤销</button><button data-c="redo" title="重做">↷ 重做</button><i>|</i>
+<select id="ff" title="字体（先选中文字）"><option value="">字体</option><option value="sans">黑体</option><option value="serif">宋体</option><option value="kai">楷体</option><option value="mono">等宽</option></select>
+<select id="fs" title="字号（先选中文字）"><option value="">字号</option><option>10</option><option>12</option><option>14</option><option>16</option><option>18</option><option>20</option><option>24</option><option>28</option><option>32</option><option>40</option><option>48</option></select><i>|</i>
+<button data-c="bold" title="粗体"><b>B</b></button><button data-c="italic" title="斜体"><i style="color:#333">I</i></button><button data-c="underline" title="下划线"><u>U</u></button><button data-c="strikeThrough" title="删除线"><s>S</s></button>
+<label title="文字颜色">文字色<input type="color" id="fc" value="#cc0000"></label><label title="背景高亮">高亮<input type="color" id="bc" value="#ffe58f"></label><i>|</i>
+<button data-c="justifyLeft">左对齐</button><button data-c="justifyCenter">居中</button><button data-c="justifyRight">右对齐</button><button data-c="justifyFull">两端对齐</button><i>|</i>
+<button data-c="insertUnorderedList">• 列表</button><button data-c="insertOrderedList">1. 列表</button><button id="lk">链接</button><button data-c="unlink">取消链接</button><button data-c="removeFormat">清除格式</button></div>
+<div id="area" contenteditable="true"></div></section></div>
+<dialog id="cfg"><h3>连接 GitHub（只需设置一次）</h3>
+<label>仓库（用户名/仓库名）<input id="rp" placeholder="例如 yourname/gaorongguo"></label>
+<label>令牌 Token<input id="tk" type="password" placeholder="github_pat_..."></label>
+<p class="hint">令牌只保存在这台电脑的浏览器里。获取方法见「更新说明.txt」。不连接也能编辑，改完点「下载备份」再手动上传。</p>
+<button class="btn p" id="ok">保存并连接</button> <button class="btn" id="no">取消</button></dialog>
+<script>
+(function(){
+var $=function(s){return document.querySelector(s)},area=$('#area'),C={},D,sha,cur,fld='text',dirty=false,saved=null;
+try{C=JSON.parse(localStorage.getItem('gh')||'{}')}catch(e){}
+var FONTS={sans:'Verdana,"PingFang SC","Microsoft YaHei",sans-serif',serif:'Georgia,"Songti SC","Noto Serif SC",SimSun,serif',kai:'KaiTi,"Kaiti SC",STKaiti,serif',mono:'Menlo,Consolas,"Courier New",monospace'};
+var CSSCMD={foreColor:1,hiliteColor:1,fontName:1,justifyLeft:1,justifyCenter:1,justifyRight:1,justifyFull:1};
+function msg(t,bad){var m=$('#msg');m.textContent=t;m.style.color=bad?'#c00':'#555'}
+function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function b64(s){var u=new TextEncoder().encode(s),r='',i=0;for(;i<u.length;i+=32768)r+=String.fromCharCode.apply(null,u.subarray(i,i+32768));return btoa(r)}
+function unb64(b){var r=atob(b.replace(/\s/g,'')),u=new Uint8Array(r.length);for(var i=0;i<r.length;i++)u[i]=r.charCodeAt(i);return new TextDecoder().decode(u)}
+function gh(m,body){return fetch('https://api.github.com/repos/'+C.repo+'/contents/content.json',{method:m,cache:'no-store',headers:{Authorization:'Bearer '+C.tok,Accept:'application/vnd.github+json'},body:body?JSON.stringify(body):undefined}).then(function(r){return r.json().then(function(j){if(!r.ok){var e=new Error(j.message||r.status);e.status=r.status;throw e}return j})})}
+function err(e){var s=e.status;msg(s==401?'令牌无效或已过期，请点「设置」重新填写。':(s==403||s==404)?'没有权限或找不到仓库：请检查「用户名/仓库名」，以及令牌是否给了该仓库的 Contents 读写权限。':(s==409||s==422)?'文件刚被别处改动过（比如在 Pages CMS 里保存过），请刷新本页后再改。':'出错：'+(e.message||e),1)}
+function inl(t){return esc(t).replace(/\[([^\]]+)\]\(([^)\s]+)\)|(https?:\/\/[^\s<>]+)|([\w.+-]+@[\w-]+\.[\w.-]+)/g,function(m,a,u,w,e){if(a)return'<a href="'+u+'">'+a+'</a>';if(e)return'<a href="mailto:'+e+'">'+e+'</a>';var k=w.match(/(&quot;|&lt;|&gt;|[.,;:!?)，。；：！？])+$/),t2=k?k[0]:'',x=w.slice(0,w.length-t2.length);return'<a href="'+x+'">'+x+'</a>'+t2})}
+function conv(s){s=String(s||'').trim();if(!s||/<\/?(p|br|div|ul|ol|li|h[1-6]|blockquote|strong|b|em|i|u|s|span|a)[\s>\/]/i.test(s))return s;return s.split(/\n\s*\n/).map(function(b){return b.trim()}).filter(Boolean).map(function(b){return'<p>'+inl(b).replace(/\n/g,'<br>')+'</p>'}).join('')}
+var TAGS=/^(P|BR|STRONG|B|EM|I|U|S|DEL|STRIKE|A|UL|OL|LI|BLOCKQUOTE|H1|H2|H3|H4|H5|H6|CODE|PRE|HR|SPAN|DIV|SUB|SUP|MARK|SMALL)$/,DROP=/^(SCRIPT|STYLE|IFRAME|OBJECT|EMBED|LINK|META|FORM|INPUT|BUTTON|SVG|MATH|TEXTAREA|SELECT)$/,STY=/^(color|background-color|font-size|font-family|font-weight|font-style|text-decoration|text-align|line-height|letter-spacing)$/;
+function sty(v){return v.split(';').map(function(x){var i=x.indexOf(':');if(i<0)return'';var k=x.slice(0,i).trim().toLowerCase(),val=x.slice(i+1).trim();return STY.test(k)&&!/url\(|expression|javascript|[<>]/i.test(val)?k+': '+val:''}).filter(Boolean).join('; ')}
+function walk(n){[].slice.call(n.childNodes).forEach(function(c){
+ if(c.nodeType==3)return;if(c.nodeType!=1||DROP.test(c.tagName)){n.removeChild(c);return}
+ walk(c);if(!TAGS.test(c.tagName)){while(c.firstChild)n.insertBefore(c.firstChild,c);n.removeChild(c);return}
+ [].slice.call(c.attributes).forEach(function(a){var k=a.name.toLowerCase();
+  if(k=='href'&&c.tagName=='A'&&/^\s*(https?:|mailto:|tel:|#)/i.test(a.value))return;
+  if(k=='style'){var v=sty(a.value);if(v)c.setAttribute('style',v);else c.removeAttribute('style');return}
+  c.removeAttribute(a.name)})})}
+function clean(h){var d=new DOMParser().parseFromString('<body>'+h,'text/html').body;walk(d);var o=d.innerHTML.trim();return/^(<p>(<br>|\s)*<\/p>)*$/.test(o)?'':o}
+function get(t,i,k,j){var s=D.sections[i];if(t=='s')return s;if(t=='c')return s.categories[k];return k>=0?s.categories[k].pages[j]:s.pages[j]}
+function row(p,i,k,j){var off=p.status==='隐藏',on=p===cur;return'<div class="row"><button class="st'+(off?' off':'')+'" data-t="p" data-i="'+i+'" data-k="'+k+'" data-j="'+j+'">'+(off?'隐藏':'显示')+'</button><button class="pg'+(on?' on':'')+(off?' off t':'')+'" data-i="'+i+'" data-k="'+k+'" data-j="'+j+'">'+esc(p.title||p.titleEn||'(无标题)')+'</button></div>'}
+function head(o,t,i,k,c){var off=o.status==='隐藏';return'<div class="'+c+'"><button class="st'+(off?' off':'')+'" data-t="'+t+'" data-i="'+i+'" data-k="'+k+'">'+(off?'隐藏':'显示')+'</button> <span class="'+(off?'off t':'')+'">'+esc(o.title||o.titleEn||'(无标题)')+'</span></div>'}
+function tree(){var h='';D.sections.forEach(function(s,i){h+=head(s,'s',i,-1,'s');(s.pages||[]).forEach(function(p,j){h+=row(p,i,-1,j)});(s.categories||[]).forEach(function(c,k){h+=head(c,'c',i,k,'c');(c.pages||[]).forEach(function(p,j){h+=row(p,i,k,j)})})});$('#tree').innerHTML=h}
+function commit(){if(cur)cur[fld]=clean(area.innerHTML)}
+function render(){area.innerHTML=cur?(conv(cur[fld])||'<p><br></p>'):'';$('#cap').textContent=cur?'正在编辑：'+(cur.title||cur.titleEn||''):'';[].forEach.call(document.querySelectorAll('#tabs [data-f]'),function(b){b.classList.toggle('on',b.dataset.f==fld)});tree()}
+function pick(p){commit();cur=p;render()}
+$('#tree').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var o=get(b.dataset.t||'p',+b.dataset.i,+b.dataset.k,+b.dataset.j);
+ if(b.classList.contains('st')){commit();o.status=o.status==='隐藏'?'显示':'隐藏';dirty=true;tree()}else pick(o)});
+$('#tabs').addEventListener('click',function(e){var b=e.target.closest('[data-f]');if(!b)return;commit();fld=b.dataset.f;render()});
+function restore(){area.focus();if(saved){var s=getSelection();s.removeAllRanges();s.addRange(saved)}}
+document.addEventListener('selectionchange',function(){var s=getSelection();if(s.rangeCount&&area.contains(s.anchorNode))saved=s.getRangeAt(0).cloneRange()});
+function ex(c,v){restore();document.execCommand('styleWithCSS',false,!!CSSCMD[c]);document.execCommand(c,false,v);dirty=true}
+$('#tb').addEventListener('mousedown',function(e){if(e.target.closest('button'))e.preventDefault()});
+$('#tb').addEventListener('click',function(e){var b=e.target.closest('button[data-c]');if(b)ex(b.dataset.c,null)});
+$('#ff').onchange=function(){var v=this.value;this.value='';if(v)ex('fontName',FONTS[v])};
+$('#fs').onchange=function(){var v=this.value;this.value='';if(!v)return;restore();document.execCommand('styleWithCSS',false,false);document.execCommand('fontSize',false,'7');
+ [].forEach.call(area.querySelectorAll('font[size="7"]'),function(f){var s=document.createElement('span');s.style.fontSize=v+'px';while(f.firstChild)s.appendChild(f.firstChild);f.replaceWith(s)});dirty=true};
+$('#fc').onchange=function(){ex('foreColor',this.value)};$('#bc').onchange=function(){ex('hiliteColor',this.value)};
+$('#lk').onclick=function(){var u=prompt('链接网址（以 https:// 开头）','https://');if(u)ex('createLink',u)};
+area.addEventListener('input',function(){dirty=true});
+area.addEventListener('paste',function(e){e.preventDefault();document.execCommand('insertText',false,(e.clipboardData||window.clipboardData).getData('text/plain'))});
+function firstPage(){var r=null;D.sections.forEach(function(s){(s.pages||[]).concat.apply(s.pages||[],(s.categories||[]).map(function(c){return c.pages||[]})).forEach(function(p){if(!r||String(p.slug).toLowerCase()=='cv'&&String(r.slug).toLowerCase()!='cv')r=p})});return r}
+function load(){msg('读取中…');var q=(C.tok&&C.repo)?gh('GET').then(function(j){sha=j.sha;return unb64(j.content)}):fetch('content.json?v='+Date.now(),{cache:'no-store'}).then(function(r){return r.text()});
+ return q.then(function(t){D=JSON.parse(t);D.sections=D.sections||[];cur=firstPage();render();msg(C.tok?'已连接：'+C.repo+'。先在左边选一个页面，再选中文字，用上面的工具栏设置。':'未连接 GitHub：改完只能点「下载备份」再手动上传。')}).catch(err)}
+function save(){commit();if(!(C.tok&&C.repo))return msg('还没连接 GitHub：请点「设置」，或用「下载备份」。',1);msg('保存中…');
+ gh('PUT',{message:'Update content.json (editor)',content:b64(JSON.stringify(D,null,1)),sha:sha}).then(function(j){sha=j.content.sha;dirty=false;msg('已保存并发布，约 1 分钟后网站更新（看不到变化就按 Ctrl+F5）。')}).catch(err)}
+$('#save').onclick=save;
+$('#dl').onclick=function(){commit();var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,1)],{type:'application/json'}));a.download='content.json';a.click()};
+$('#set').onclick=function(){$('#rp').value=C.repo||'';$('#tk').value=C.tok||'';$('#cfg').showModal()};
+$('#no').onclick=function(){$('#cfg').close()};
+$('#ok').onclick=function(){C={repo:$('#rp').value.trim().replace(/^https?:\/\/github\.com\//,'').replace(/\/$/,''),tok:$('#tk').value.trim()};try{localStorage.setItem('gh',JSON.stringify(C))}catch(e){}$('#cfg').close();load()};
+window.addEventListener('beforeunload',function(e){if(dirty){e.preventDefault();e.returnValue=''}});
+document.execCommand('defaultParagraphSeparator',false,'p');
+if(!C.tok)$('#cfg').showModal();
+load();
+})();
+</script></body></html>

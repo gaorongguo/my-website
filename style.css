@@ -46,3 +46,18 @@ h1{font-family:var(--tff,var(--ff))}
 #lb .lbc{width:100%;max-width:min(94vw,900px);margin-top:10px}
 #lb .x{all:unset;position:absolute;top:8px;right:14px;cursor:pointer;font-size:28px;line-height:1;color:var(--fg);padding:6px}
 #lb .x:hover{color:var(--hover)}#lb .x:focus-visible{outline:1px solid var(--hover)}
+/* v3: 富文本内容 */
+.tx ul,.tx ol,.doc ul,.doc ol{margin:0 0 9px;padding-left:1.5em}
+.tx li,.doc li{text-align:var(--ta,justify)}.tx li p,.doc li p{margin:0}
+.tx blockquote,.doc blockquote{margin:0 0 9px;padding-left:12px;border-left:2px solid rgba(128,128,128,.4)}
+.tx h2,.tx h3,.tx h4,.doc h2,.doc h3,.doc h4{font-size:var(--tfs);margin:14px 0 6px}
+.tx hr,.doc hr{border:0;border-top:1px solid rgba(128,128,128,.35);margin:14px 0}
+.tx code,.doc code{background:rgba(128,128,128,.15);padding:0 4px}
+.tx pre,.doc pre{overflow:auto;background:rgba(128,128,128,.12);padding:8px}
+/* v4: 左、中、右三列顶部对齐 */
+@media(min-width:801px){#menu{padding-top:36px}#content{padding-top:36px}}
+#menu .name{line-height:1.1;margin:0 0 22px}
+.tx h1,.doc h1{line-height:1.1;margin:0 0 14px}
+@supports (text-box:trim-both cap alphabetic){#menu .name,.tx h1,.doc h1{text-box:trim-both cap alphabetic}}
+/* v4b */
+.work .tx{flex:1 1 240px}
