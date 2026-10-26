@@ -323,7 +323,7 @@
     {
      "title": "媒体",
      "titleEn": "Press",
-     "status": "显示",
+     "status": "隐藏",
      "slug": "press",
      "layout": "entries",
      "showTitle": "自动",
