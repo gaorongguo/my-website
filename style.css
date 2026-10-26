@@ -61,3 +61,21 @@ h1{font-family:var(--tff,var(--ff))}
 @supports (text-box:trim-both cap alphabetic){#menu .name,.tx h1,.doc h1{text-box:trim-both cap alphabetic}}
 /* v4b */
 .work .tx{flex:1 1 240px}
+/* v5: 单个链接板块、条目列表、展览画廊 */
+#menu .sec a{color:var(--sfg,var(--mact))}#menu .sec a:hover{color:var(--hover)}#menu .sec a[aria-current]{color:var(--mact)}
+#menu .sec.l{margin-bottom:22px}
+.doc>p:first-child,.tx>p:first-child{margin-top:0}
+@supports (text-box:trim-both cap alphabetic){.doc>p:first-child,.tx>p:first-child{text-box:trim-start cap alphabetic}}
+.ents{max-width:900px}
+.ent{display:flex;gap:28px;align-items:flex-start;padding:24px 0;border-bottom:1px solid rgba(128,128,128,.3)}
+.ent:first-child{padding-top:0}
+.ent figure{margin:0;flex:0 0 34%;max-width:360px;min-width:110px}
+.ent img{display:block;width:100%;height:auto;cursor:zoom-in}
+.et{flex:1;min-width:0;max-width:44em}.et p{margin:0 0 6px}
+.en{font-weight:600;color:var(--tfg);line-height:1.3}.ed{color:var(--cfg)}.el{word-break:break-all}
+.gg{padding:20px 0 24px;border-top:1px solid rgba(128,128,128,.3)}.gg:first-child{padding-top:0;border-top:0}
+.gh{font-size:var(--tfs);font-weight:600;color:var(--tfg);margin:0 0 12px;font-family:var(--tff,var(--ff))}
+.gr{display:flex;flex-wrap:wrap;gap:12px;align-items:flex-start}
+.gr img{display:block;height:var(--gh,200px);width:auto;max-width:100%;object-fit:contain;cursor:zoom-in;transition:opacity .2s}.gr img:hover{opacity:.88}
+@media(max-width:800px){.gr img{height:auto;width:100%;max-height:none}.ent{gap:14px}}
+.doc a,.tx a,.et a{text-decoration:underline;text-decoration-color:rgba(128,128,128,.55);text-underline-offset:3px}
