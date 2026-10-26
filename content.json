@@ -146,7 +146,7 @@
           "titleEn": "Installation views",
           "status": "显示",
           "slug": "views",
-          "layout": "gallery",
+          "layout": "grid",
           "showTitle": "自动",
           "entriesStyle": "side",
           "blocks": [
