@@ -134,7 +134,7 @@
     {
      "title": "现场",
      "titleEn": "Installation views",
-     "status": "显示",
+     "status": "隐藏",
      "slug": "views",
      "layout": "gallery",
      "images": [
