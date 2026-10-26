@@ -22,8 +22,24 @@ content:
         label: "网站名称 English"
         type: "string"
       - name: "homePage"
-        label: "首页显示哪一页（填页面的「网址标识」，默认 cv）"
+        label: "首页显示哪一页（填页面的「网址标识」，默认 about）"
         type: "string"
+      - name: "analyticsId"
+        label: "Google Analytics 衡量 ID（G-XXXXXXXXXX；填了才会统计访问量，留空=不统计）"
+        type: "string"
+      - name: "gaId"
+        label: "Google Analytics 衡量 ID（以 G- 开头，如 G-ABC123XYZ；不填=不统计访问）"
+        type: "string"
+      - name: "gaConsent"
+        label: "统计前先征求访客同意（欧盟访客需要，默认「是」，会出现一个小提示条；选「否」则直接统计、不出现提示条）"
+        type: "select"
+        default: "yes"
+        options:
+          values:
+            - name: "yes"
+              label: "是（默认）"
+            - name: "no"
+              label: "否（直接统计）"
       - name: "style"
         label: "全站样式（所有页面默认用这个；网站名称、菜单、正文的字体字号颜色都在这里）"
         type: "object"
@@ -540,6 +556,16 @@ content:
                       label: "显示"
                     - name: "隐藏"
                       label: "隐藏"
+              - name: "entriesStyle"
+                label: "条目列表的排法（显示方式选「条目列表」时用）"
+                type: "select"
+                default: "side"
+                options:
+                  values:
+                    - name: "side"
+                      label: "左图右文"
+                    - name: "stack"
+                      label: "上图下文（像参考网页那样，图片在上，文字在下）"
               - name: "images"
                 label: "图片（带说明；点图片可在页面里放大）"
                 type: "object"
@@ -555,10 +581,10 @@ content:
                       media: "images"
                   - name: "caption"
                     label: "图片说明（显示在这张图正下方）"
-                    type: "string"
+                    type: "text"
                   - name: "captionEn"
                     label: "图片说明 English（选填）"
-                    type: "string"
+                    type: "text"
                   - name: "status"
                     label: "显示状态（选「隐藏」=暂时不在网站上出现，随时可改回）"
                     type: "select"
@@ -603,6 +629,57 @@ content:
                     type: "text"
                   - name: "status"
                     label: "显示状态"
+                    type: "select"
+                    default: "显示"
+                    options:
+                      values:
+                        - name: "显示"
+                          label: "显示"
+                        - name: "隐藏"
+                          label: "隐藏（暂时不显示）"
+              - name: "blocks"
+                label: "展览块（展览画廊用：一个展览一块，里面放这个展览的图片；图片下面的文字请在「文字编辑器」里写，想排几行都行）"
+                type: "object"
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: "{index}. {label}　{status}"
+                fields:
+                  - name: "label"
+                    label: "名称（只在后台用来区分，如 Altonaer Museum 2019）"
+                    type: "string"
+                  - name: "images"
+                    label: "这个展览的图片"
+                    type: "object"
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "图片 {index}　{status}"
+                    fields:
+                      - name: "src"
+                        label: "图片"
+                        type: "image"
+                        options:
+                          media: "images"
+                      - name: "status"
+                        label: "显示状态"
+                        type: "select"
+                        default: "显示"
+                        options:
+                          values:
+                            - name: "显示"
+                              label: "显示"
+                            - name: "隐藏"
+                              label: "隐藏（暂时不显示）"
+                  - name: "moreImages"
+                    label: "批量添加图片（一次可选很多张）"
+                    type: "image"
+                    options:
+                      media: "images"
+                      multiple:
+                        max: 300
+                  - name: "status"
+                    label: "显示状态（这一块暂时不想显示就选隐藏）"
                     type: "select"
                     default: "显示"
                     options:
@@ -1001,6 +1078,16 @@ content:
                           label: "显示"
                         - name: "隐藏"
                           label: "隐藏"
+                  - name: "entriesStyle"
+                    label: "条目列表的排法（显示方式选「条目列表」时用）"
+                    type: "select"
+                    default: "side"
+                    options:
+                      values:
+                        - name: "side"
+                          label: "左图右文"
+                        - name: "stack"
+                          label: "上图下文（像参考网页那样，图片在上，文字在下）"
                   - name: "images"
                     label: "图片（带说明；点图片可在页面里放大）"
                     type: "object"
@@ -1016,10 +1103,10 @@ content:
                           media: "images"
                       - name: "caption"
                         label: "图片说明（显示在这张图正下方）"
-                        type: "string"
+                        type: "text"
                       - name: "captionEn"
                         label: "图片说明 English（选填）"
-                        type: "string"
+                        type: "text"
                       - name: "status"
                         label: "显示状态（选「隐藏」=暂时不在网站上出现，随时可改回）"
                         type: "select"
@@ -1064,6 +1151,57 @@ content:
                         type: "text"
                       - name: "status"
                         label: "显示状态"
+                        type: "select"
+                        default: "显示"
+                        options:
+                          values:
+                            - name: "显示"
+                              label: "显示"
+                            - name: "隐藏"
+                              label: "隐藏（暂时不显示）"
+                  - name: "blocks"
+                    label: "展览块（展览画廊用：一个展览一块，里面放这个展览的图片；图片下面的文字请在「文字编辑器」里写，想排几行都行）"
+                    type: "object"
+                    list:
+                      collapsible:
+                        collapsed: true
+                        summary: "{index}. {label}　{status}"
+                    fields:
+                      - name: "label"
+                        label: "名称（只在后台用来区分，如 Altonaer Museum 2019）"
+                        type: "string"
+                      - name: "images"
+                        label: "这个展览的图片"
+                        type: "object"
+                        list:
+                          collapsible:
+                            collapsed: true
+                            summary: "图片 {index}　{status}"
+                        fields:
+                          - name: "src"
+                            label: "图片"
+                            type: "image"
+                            options:
+                              media: "images"
+                          - name: "status"
+                            label: "显示状态"
+                            type: "select"
+                            default: "显示"
+                            options:
+                              values:
+                                - name: "显示"
+                                  label: "显示"
+                                - name: "隐藏"
+                                  label: "隐藏（暂时不显示）"
+                      - name: "moreImages"
+                        label: "批量添加图片（一次可选很多张）"
+                        type: "image"
+                        options:
+                          media: "images"
+                          multiple:
+                            max: 300
+                      - name: "status"
+                        label: "显示状态（这一块暂时不想显示就选隐藏）"
                         type: "select"
                         default: "显示"
                         options:
