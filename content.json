@@ -146,9 +146,9 @@
           "titleEn": "Installation views",
           "status": "显示",
           "slug": "views",
-          "layout": "entries",
+          "layout": "gallery",
           "showTitle": "自动",
-          "entriesStyle": "side",
+          "entriesStyle": "stack",
           "blocks": [
             {
               "label": "Altonaer Museum, Ger",
