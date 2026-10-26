@@ -325,7 +325,7 @@
           "titleEn": "Press",
           "status": "显示",
           "slug": "press",
-          "layout": "grid",
+          "layout": "entries",
           "showTitle": "自动",
           "entriesStyle": "side",
           "images": [
