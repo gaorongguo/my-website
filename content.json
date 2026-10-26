@@ -134,7 +134,7 @@
     {
      "title": "现场",
      "titleEn": "Installation views",
-     "status": "隐藏",
+     "status": "显示",
      "slug": "views",
      "layout": "gallery",
      "images": [
@@ -218,7 +218,8 @@
        "caption": "Sotheby's, London, UK",
        "status": "显示"
       }
-     ]
+     ],
+     "textEn": ""
     }
    ],
    "categories": []
