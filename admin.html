@@ -27,7 +27,7 @@ header{position:static;flex:none}#app{flex:1;min-height:0;min-height:0}
 #tb{flex:none}#area{flex:1;min-height:0;overflow:auto}
 #tb select{max-width:118px}#pt.on{background:#cfe0ff}
 @media(max-width:800px){body{display:block;overflow:auto;height:auto}#app{display:block}header{position:sticky;top:0}#tb{position:sticky;top:var(--hh,60px);z-index:6}#area{overflow:visible}}
-</style></head><body>
+.row.sub{margin-left:16px}</style></head><body>
 <header><b>文字编辑器 · 高荣国网站</b><button class="btn" id="nav" title="把左侧导航整理成：作品 / 展览 / 文本 / 媒体 / 关于 / 联系（不会改动你的文字和图片，先不发布，可以反悔）">整理成新导航</button><button class="btn" id="set">设置</button><button class="btn" id="dl">下载备份</button><button class="btn p" id="save">保存并发布</button><div id="msg"></div></header>
 <div id="app"><aside id="tree"></aside>
 <section id="ed"><div id="tabs"><button class="btn on" data-f="text">中文 / 通用正文</button> <button class="btn" data-f="textEn">English 正文</button><span id="cap"></span> <span id="pset" style="margin-left:12px">标题显示 <select id="pst" class="btn"><option value="自动">自动</option><option value="显示">显示</option><option value="隐藏">隐藏</option></select> 显示方式 <select id="pla" class="btn"><option value="slideshow">一张张看</option><option value="grid">缩略图平铺</option><option value="gallery">展览画廊</option><option value="entries">条目列表</option></select></span></div>
@@ -69,15 +69,20 @@ function walk(n){[].slice.call(n.childNodes).forEach(function(c){
   if(k=='style'){var v=sty(a.value);if(v)c.setAttribute('style',v);else c.removeAttribute('style');return}
   c.removeAttribute(a.name)})})}
 function clean(h){var d=new DOMParser().parseFromString('<body>'+h,'text/html').body;walk(d);var o=d.innerHTML.trim();return/^(<p>(<br>|\s)*<\/p>)*$/.test(o)?'':o}
-function get(t,i,k,j){var s=D.sections[i];if(t=='s')return s;if(t=='c')return s.categories[k];return k>=0?s.categories[k].pages[j]:s.pages[j]}
-function row(p,i,k,j){var off=p.status==='隐藏',on=p===cur;return'<div class="row"><button class="st'+(off?' off':'')+'" data-t="p" data-i="'+i+'" data-k="'+k+'" data-j="'+j+'">'+(off?'隐藏':'显示')+'</button><button class="pg'+(on?' on':'')+(off?' off t':'')+'" data-i="'+i+'" data-k="'+k+'" data-j="'+j+'">'+esc(p.title||p.titleEn||'(无标题)')+'</button></div>'}
-function head(o,t,i,k,c){var off=o.status==='隐藏';return'<div class="'+c+'"><button class="st'+(off?' off':'')+'" data-t="'+t+'" data-i="'+i+'" data-k="'+k+'">'+(off?'隐藏':'显示')+'</button> <span class="'+(off?'off t':'')+'">'+esc(o.title||o.titleEn||'(无标题)')+'</span></div>'}
-function tree(){var h='';D.sections.forEach(function(s,i){h+=head(s,'s',i,-1,'s');(s.pages||[]).forEach(function(p,j){h+=row(p,i,-1,j)});(s.categories||[]).forEach(function(c,k){h+=head(c,'c',i,k,'c');(c.pages||[]).forEach(function(p,j){h+=row(p,i,k,j)})})});$('#tree').innerHTML=h}
-function commit(){if(cur)cur[fld]=clean(area.innerHTML)}
-function render(){area.scrollTop=0;area.innerHTML=cur?(conv(cur[fld])||'<p><br></p>'):'';$('#cap').textContent=cur?'正在编辑：'+(cur.title||cur.titleEn||''):'';$('#pst').value=cur&&cur.showTitle||'自动';$('#pla').value=cur&&cur.layout||'slideshow';[].forEach.call(document.querySelectorAll('#tabs [data-f]'),function(b){b.classList.toggle('on',b.dataset.f==fld)});tree()}
-function pick(p){commit();cur=p;render()}
-$('#tree').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var o=get(b.dataset.t||'p',+b.dataset.i,+b.dataset.k,+b.dataset.j);
- if(b.classList.contains('st')){commit();o.status=o.status==='隐藏'?'显示':'隐藏';dirty=true;tree()}else pick(o)});
+var REG=[],PAR=new Map(),KIND=new Map(),page=null;
+function plain(h){return String(h||'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim()}
+function lab(o){return String(o.title||o.titleEn||o.label||'').trim()||'(无标题)'}
+function rg(o,k,pg){REG.push(o);KIND.set(o,k);if(pg)PAR.set(o,pg);return REG.length-1}
+function stb(o,n){var off=o.status==='隐藏';return'<button class="st'+(off?' off':'')+'" data-n="'+n+'">'+(off?'隐藏':'显示')+'</button>'}
+function row(o,k,txt,pg,cls){var n=rg(o,k,pg),off=o.status==='隐藏';return'<div class="row'+(cls?' '+cls:'')+'">'+stb(o,n)+'<button class="pg'+(o===cur?' on':'')+(off?' off t':'')+'" data-n="'+n+'">'+esc(txt)+'</button></div>'}
+function head(o,k,c){var n=rg(o,k),off=o.status==='隐藏';return'<div class="'+c+'">'+stb(o,n)+' <span class="'+(off?'off t':'')+'">'+esc(lab(o))+'</span></div>'}
+function kids(p){var h='';(p.blocks||[]).forEach(function(b,n){h+=row(b,'b','展览块 '+(n+1)+(b.label?'：'+b.label:''),p,'sub')});(p.images||[]).forEach(function(im,n){var t=plain(im.caption);h+=row(im,'m','图片 '+(n+1)+(t?'：'+t.slice(0,10):''),p,'sub')});return h}
+function tree(){REG=[];PAR=new Map();KIND=new Map();var h='';D.sections.forEach(function(s){h+=head(s,'s','s');(s.pages||[]).forEach(function(p){h+=row(p,'p',lab(p))+(page===p?kids(p):'')});(s.categories||[]).forEach(function(c){h+=head(c,'c','c');(c.pages||[]).forEach(function(p){h+=row(p,'p',lab(p))+(page===p?kids(p):'')})})});$('#tree').innerHTML=h}
+function F(){return KIND.get(cur)=='m'?(fld=='text'?'caption':'captionEn'):fld}
+function commit(){if(cur)cur[F()]=clean(area.innerHTML)}
+function render(){area.scrollTop=0;area.innerHTML=cur?(conv(cur[F()])||'<p><br></p>'):'';var k=KIND.get(cur),pg=page||cur;$('#cap').textContent=cur?'正在编辑：'+((k=='b'||k=='m')&&page?lab(page)+' › '+(k=='m'?'图片说明':'展览块文字'):lab(cur)):'';$('#pst').value=pg&&pg.showTitle||'自动';$('#pla').value=pg&&pg.layout||'slideshow';[].forEach.call(document.querySelectorAll('#tabs [data-f]'),function(b){b.classList.toggle('on',b.dataset.f==fld)});tree()}
+function pick(o){commit();cur=o;var k=KIND.get(o);page=(k=='b'||k=='m')?(PAR.get(o)||page):o;render()}
+$('#tree').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;var o=REG[+b.dataset.n];if(!o)return;if(b.classList.contains('st')){commit();o.status=o.status==='隐藏'?'显示':'隐藏';dirty=true;tree()}else pick(o)});
 $('#tabs').addEventListener('click',function(e){var b=e.target.closest('[data-f]');if(!b)return;commit();fld=b.dataset.f;render()});
 function restore(){area.focus({preventScroll:true});if(saved){var s=getSelection();s.removeAllRanges();s.addRange(saved)}}
 document.addEventListener('selectionchange',function(){var s=getSelection();if(s.rangeCount&&area.contains(s.anchorNode))saved=s.getRangeAt(0).cloneRange()});
@@ -124,20 +129,22 @@ $('#fc').onchange=function(){ex('foreColor',this.value)};$('#bc').onchange=funct
 $('#lk').onclick=function(){var u=prompt('链接网址（以 https:// 开头）','https://');if(u)ex('createLink',u)};
 area.addEventListener('input',function(){dirty=true});
 area.addEventListener('paste',function(e){e.preventDefault();document.execCommand('insertText',false,(e.clipboardData||window.clipboardData).getData('text/plain'))});
-function firstPage(){var r=null;D.sections.forEach(function(s){(s.pages||[]).concat.apply(s.pages||[],(s.categories||[]).map(function(c){return c.pages||[]})).forEach(function(p){if(!r||String(p.slug).toLowerCase()=='cv'&&String(r.slug).toLowerCase()!='cv')r=p})});return r}
+function firstPage(){var r=null,pr=function(p){var t=String(p.slug||'').toLowerCase();return t=='about'?2:t=='cv'?1:0};D.sections.forEach(function(s){(s.pages||[]).concat.apply(s.pages||[],(s.categories||[]).map(function(c){return c.pages||[]})).forEach(function(p){if(!r||pr(p)>pr(r))r=p})});return r}
 function load(){msg('读取中…');var q=(C.tok&&C.repo)?gh('GET').then(function(j){sha=j.sha;return unb64(j.content)}):fetch('content.json?v='+Date.now(),{cache:'no-store'}).then(function(r){return r.text()});
- return q.then(function(t){D=JSON.parse(t);D.sections=D.sections||[];cur=firstPage();render();msg(C.tok?'已连接：'+C.repo+'。先在左边选一个页面，再选中文字，用上面的工具栏设置。':'未连接 GitHub：改完只能点「下载备份」再手动上传。')}).catch(err)}
+ return q.then(function(t){D=JSON.parse(t);D.sections=D.sections||[];cur=page=firstPage();render();msg(C.tok?'已连接：'+C.repo+'。先在左边选一个页面，再选中文字，用上面的工具栏设置。':'未连接 GitHub：改完只能点「下载备份」再手动上传。')}).catch(err)}
 function save(){commit();if(!(C.tok&&C.repo))return msg('还没连接 GitHub：请点「设置」，或用「下载备份」。',1);msg('保存中…');
  gh('PUT',{message:'Update content.json (editor)',content:b64(JSON.stringify(D,null,1)),sha:sha}).then(function(j){sha=j.content.sha;dirty=false;msg('已保存并发布，约 1 分钟后网站更新（看不到变化就按 Ctrl+F5）。')}).catch(err)}
-$('#pst').onchange=function(){if(cur){cur.showTitle=this.value;dirty=true}};
-$('#pla').onchange=function(){if(cur){cur.layout=this.value;dirty=true}};
+$('#pst').onchange=function(){var t=page||cur;if(t){t.showTitle=this.value;dirty=true}};
+$('#pla').onchange=function(){var t=page||cur;if(t){t.layout=this.value;dirty=true}};
+function toBlocks(p,log){if((p.blocks||[]).length||!(p.images||[]).length)return;var G=[];p.images.forEach(function(im){var c=String(im.caption||'').trim();if(!G.length||(c&&c!==G[G.length-1].c))G.push({c:c,a:[]});G[G.length-1].a.push({src:im.src,caption:'',captionEn:'',status:im.status||'显示'})});
+ p.blocks=G.map(function(g){return{label:plain(g.c).slice(0,20),images:g.a,moreImages:[],text:g.c?conv(g.c):'',textEn:'',status:'显示'}});p.images=[];log.push('展览页的图片已按说明分成 '+G.length+' 个展览块，说明文字变成每块图片下方、可自由编辑的文字')}
 $('#nav').onclick=function(){commit();$('#dl').click();
  var S=D.sections,all=[],log=[],made={};
  S.forEach(function(s){(s.pages||[]).forEach(function(p){all.push({p:p,s:s,a:s.pages})});(s.categories||[]).forEach(function(c){(c.pages||[]).forEach(function(p){all.push({p:p,s:s,a:c.pages})})})});
  function loc(sl,re){return all.filter(function(x){return sl.indexOf(String(x.p.slug||'').toLowerCase())>=0||re.test((x.p.title||'')+' '+(x.p.titleEn||''))})[0]}
  [['ex',['views'],/installation|现场|exhibition/i,'展览','Exhibitions','gallery'],['pr',['press'],/press|媒体/i,'媒体','Press','entries'],['ct',['contact'],/contact|联系/i,'联系','Contact','']].forEach(function(r){
   var x=loc(r[1],r[2]);if(!x){log.push('没找到「'+r[4]+'」页面，已跳过（以后可在后台新建）');return}
-  if(r[5]&&(!x.p.layout||x.p.layout=='slideshow'||(r[0]=='ex'&&x.p.layout=='grid')))x.p.layout=r[5];
+  if(r[5]&&(!x.p.layout||x.p.layout=='slideshow'||(r[0]=='ex'&&x.p.layout=='grid')))x.p.layout=r[5];if(r[0]=='ex')toBlocks(x.p,log);
   if(x.s.asLink==='yes'&&(x.s.pages||[]).length===1){made[r[0]]=x.s;return}
   x.a.splice(x.a.indexOf(x.p),1);made[r[0]]={title:r[3],titleEn:r[4],status:'显示',asLink:'yes',style:{},pages:[x.p],categories:[]};log.push('「'+(x.p.title||x.p.titleEn)+'」→ 左侧单独一项 '+r[4])});
  var mv=Object.keys(made).map(function(k){return made[k]}),pro=null,txt=null,abt=null,oth=[];
@@ -145,8 +152,12 @@ $('#nav').onclick=function(){commit();$('#dl').click();
   if(!pro&&((s.categories||[]).length||/project|artworks?|作品/i.test(t)))pro=s;else if(!txt&&/texts?|文本/i.test(t))txt=s;else if(!abt&&/about|关于/i.test(t))abt=s;else oth.push(s)});
  function nm(s,t,e){if(s){if(!s.title)s.title=t;s.titleEn=e}}
  nm(pro,'作品','Projects');nm(txt,'文本','Texts');nm(abt,'关于','About');
+ var cvx=loc(['cv'],/(^|\s)(cv|简历)(\s|$)/i);
+ if(cvx&&String(cvx.p.slug||'').toLowerCase()!='about'){cvx.p.title='关于';cvx.p.titleEn='About';cvx.p.slug='about';log.push('「简历 CV」改名为「关于 About」，网站一打开先显示它');if(!abt){abt=cvx.s;nm(abt,'关于','About')}}
+ if(!D.homePage||String(D.homePage).toLowerCase()=='cv')D.homePage='about';
+ if(abt&&(abt.pages||[]).length+(abt.categories||[]).reduce(function(n,c){return n+(c.pages||[]).length},0)===1)abt.asLink='yes';
  D.sections=[pro,made.ex,txt,made.pr,abt].concat(oth,[made.ct]).filter(Boolean);
- dirty=true;cur=firstPage();render();
+ dirty=true;cur=page=firstPage();render();
  msg('已整理（还没发布）：'+(log.length?log.join('；')+'。':'')+'请看左边目录，满意就点「保存并发布」；不满意就刷新本页，什么都不会改动。刚才已自动下载了一份备份。')};
 $('#save').onclick=save;
 $('#dl').onclick=function(){commit();var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(D,null,1)],{type:'application/json'}));a.download='content.json';a.click()};
