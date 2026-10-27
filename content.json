@@ -168,7 +168,7 @@
      "titleEn": "Installation views",
      "status": "显示",
      "slug": "views",
-     "layout": "grid",
+     "layout": "gallery",
      "showTitle": "自动",
      "entriesStyle": "side",
      "blocks": [
