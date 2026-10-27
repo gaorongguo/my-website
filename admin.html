@@ -29,6 +29,10 @@ dialog{border:1px solid #ccc;border-radius:10px;max-width:760px;width:92vw}dialo
 #libg{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;max-height:55vh;overflow:auto}#libg label{margin:0;font-size:11px;word-break:break-all}#libg img{width:100%;height:80px;object-fit:contain;background:#f3f4f6;display:block}
 #hl .hv{display:flex;gap:8px;align-items:center;border-bottom:1px solid #eee;padding:4px 0;font-size:13px}#hl .hv span{flex:1}
 @media(max-width:800px){body{display:block;overflow:auto;height:auto}#app{display:block}#tree{width:auto;border-right:0;border-bottom:1px solid #e3e5e8;max-height:42vh}#ed{overflow:visible}#tb{top:var(--hh,60px)}header{position:sticky;top:0;z-index:7}}
+.ic{cursor:grab}.ic.dragging,.bk.dragging,#tree [data-d].dragging{opacity:.35}
+.ic.db{box-shadow:-3px 0 0 #2f6df6}.ic.da{box-shadow:3px 0 0 #2f6df6}.bk.db{box-shadow:0 -3px 0 #2f6df6}.bk.da{box-shadow:0 3px 0 #2f6df6}
+#tree [data-d].db{box-shadow:0 -2px 0 #2f6df6}#tree [data-d].da{box-shadow:0 2px 0 #2f6df6}
+.ip.filedrop{outline:2px dashed #2f6df6;background:#f2f7ff}
 </style></head><body>
 <header><b>网站编辑器 · 高荣国</b><button class="btn" id="hist" title="找回以前保存过的版本">历史版本</button><button class="btn" id="nav" title="把左侧导航整理成：作品 / 展览 / 文本 / 媒体 / 关于 / 联系（先不发布，可以反悔）">整理导航</button><button class="btn" id="set">设置</button><button class="btn" id="dl">下载备份</button><button class="btn p" id="save">保存并发布</button><div id="msg"></div></header>
 <div id="app"><aside id="tree"></aside>
@@ -136,6 +140,15 @@ function field(label,node,hint){return h('label',{cls:'fl'},[h('span',{txt:label
 function tin(o,k,ph,after){var i=h('input',{type:'text',value:o[k]==null?'':o[k],placeholder:ph||''});i.addEventListener('input',function(){o[k]=i.value;dirty=true;if(after)after()});return i}
 function selF(o,k,opts,def,after){var s=h('select',{},opts.map(function(x){return h('option',{value:x[0],txt:x[1]})}));s.value=o[k]==null?(def==null?'':def):o[k];s.addEventListener('change',function(){if(s.value===''&&def==null)delete o[k];else o[k]=s.value;dirty=true;if(after)after()});return s}
 function rerender(){commit();panel()}
+var DRAG=null;
+function clearDrop(){[].forEach.call(document.querySelectorAll('.da,.db'),function(x){x.classList.remove('da','db')})}
+function after(el,e,axis){var r=el.getBoundingClientRect();return axis=='x'?e.clientX>r.left+r.width/2:e.clientY>r.top+r.height/2}
+function dnd(el,o,arr,axis){el.draggable=true;
+ el.addEventListener('dragstart',function(e){DRAG={o:o,arr:arr};el.classList.add('dragging');e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain','x');e.stopPropagation()});
+ el.addEventListener('dragend',function(){DRAG=null;el.classList.remove('dragging');clearDrop()});
+ el.addEventListener('dragover',function(e){if(!DRAG||DRAG.arr!==arr||DRAG.o===o)return;e.preventDefault();e.stopPropagation();clearDrop();el.classList.add(after(el,e,axis)?'da':'db')});
+ el.addEventListener('dragleave',function(){el.classList.remove('da','db')});
+ el.addEventListener('drop',function(e){if(!DRAG||DRAG.arr!==arr||DRAG.o===o)return;e.preventDefault();e.stopPropagation();var af=after(el,e,axis),mvd=DRAG.o;DRAG=null;commit();arr.splice(arr.indexOf(mvd),1);arr.splice(arr.indexOf(o)+(af?1:0),0,mvd);dirty=true;panel()})}
 function imgs(a,m){var r=[];[].concat(a||[],m||[]).forEach(function(x){if(typeof x=='string')x={src:x};if(x&&x.src)r.push(Object.assign({caption:'',captionEn:'',status:'显示'},x))});return r}
 function norm(){D.sections=D.sections||[];D.style=D.style||{};D.sections.forEach(function(s){s.pages=s.pages||[];s.categories=s.categories||[];s.style=s.style||{};s.categories.forEach(function(c){c.pages=c.pages||[];c.style=c.style||{}});
  s.pages.concat.apply(s.pages,s.categories.map(function(c){return c.pages})).forEach(function(p){p.style=p.style||{};p.images=imgs(p.images,p.moreImages);p.moreImages=[];var E=p.entries||[];
@@ -143,12 +156,12 @@ function norm(){D.sections=D.sections||[];D.style=D.style||{};D.sections.forEach
   (p.blocks||[]).forEach(function(b){b.images=imgs(b.images,b.moreImages);b.moreImages=[];if(!b.status)b.status='显示'})})})}
 function stb(o,n){var off=o.status==='隐藏';return'<button class="st'+(off?' off':'')+'" data-n="'+n+'" title="点一下切换 显示/隐藏">'+(off?'隐藏':'显示')+'</button>'}
 function reg(o,k,pg,arr){REG.push(o);KIND.set(o,k);if(pg)PAR.set(o,pg);if(arr)PARR.set(o,arr);return REG.length-1}
-function trow(o,k,txt,pg,arr,cls){var n=reg(o,k,pg,arr),off=o.status==='隐藏';return'<div class="row'+(cls?' '+cls:'')+'">'+stb(o,n)+'<button class="pg'+(o===cur?' on':'')+(off?' off t':'')+'" data-n="'+n+'">'+esc(txt)+'</button></div>'}
-function thead(o,k,arr,cls){var n=reg(o,k,null,arr),off=o.status==='隐藏';return'<div class="'+cls+'">'+stb(o,n)+'<button class="pg'+(o===cur?' on':'')+(off?' off t':'')+'" data-n="'+n+'">'+esc(lab(o))+'</button></div>'}
+function trow(o,k,txt,pg,arr,cls){var n=reg(o,k,pg,arr),off=o.status==='隐藏';return'<div class="row'+(cls?' '+cls:'')+'" data-d="'+n+'">'+stb(o,n)+'<button class="pg'+(o===cur?' on':'')+(off?' off t':'')+'" data-n="'+n+'">'+esc(txt)+'</button></div>'}
+function thead(o,k,arr,cls){var n=reg(o,k,null,arr),off=o.status==='隐藏';return'<div class="'+cls+'" data-d="'+n+'">'+stb(o,n)+'<button class="pg'+(o===cur?' on':'')+(off?' off t':'')+'" data-n="'+n+'">'+esc(lab(o))+'</button></div>'}
 function kids(p){var o='';(p.blocks||[]).forEach(function(b,i){o+=trow(b,'b','展览块 '+(i+1)+(b.label?'：'+b.label:''),p,p.blocks,'sub')});if(!(p.blocks||[]).length)(p.images||[]).forEach(function(im,i){var t=plain(im.caption);o+=trow(im,'m','图片 '+(i+1)+(t?'：'+t.slice(0,10):''),p,p.images,'sub')});return o}
 function tree(){REG=[];var o='<div class="row" style="margin-left:0"><button class="pg'+(cur===SITE?' on':'')+'" data-n="'+reg(SITE,'site')+'">⚙ 全站设置</button></div>';
  D.sections.forEach(function(s){o+=thead(s,'s',D.sections,'s');s.pages.forEach(function(p){o+=trow(p,'p',lab(p),null,s.pages)+(page===p?kids(p):'')});s.categories.forEach(function(c){o+=thead(c,'c',s.categories,'c');c.pages.forEach(function(p){o+=trow(p,'p',lab(p),null,c.pages)+(page===p?kids(p):'')})})});
- o+='<p style="margin-top:14px"><button class="btn" id="addS">＋ 新建板块</button></p>';$('#tree').innerHTML=o;
+ o+='<p style="margin-top:14px"><button class="btn" id="addS">＋ 新建板块</button></p>';$('#tree').innerHTML=o;[].forEach.call($('#tree').querySelectorAll('[data-d]'),function(el){var ob=REG[+el.dataset.d],ar=ob&&PARR.get(ob);if(ar)dnd(el,ob,ar,'y')});
  $('#addS').onclick=function(){var s={title:'新板块',titleEn:'New section',status:'显示',asLink:'no',style:{},pages:[],categories:[]};D.sections.push(s);dirty=true;pick(s)}}
 function F(){return KIND.get(cur)=='m'?(fld=='text'?'caption':'captionEn'):fld}
 function commit(){if(cur&&loaded===cur)cur[F()]=clean(area.innerHTML)}
@@ -182,18 +195,24 @@ function pageForm(p){var f=h('div',{cls:'fg'});f.append(field('页面名称（�
 function blockForm(b){var f=h('div',{cls:'fg'});f.append(field('名称（只在后台用来区分）',tin(b,'label','如 Altonaer Museum 2019',tree)),field('显示状态',selF(b,'status',ST,'显示',function(){tree()})));return f}
 function imageForm(im){var f=h('div',{cls:'fg'});f.append(h('div',{},[h('img',{cls:'pv',src:imgUrl(im.src)}),btn('替换这张图片',function(){up(null,im)})]),field('显示状态',selF(im,'status',ST,'显示',function(){tree()})));return f}
 function imgPanel(owner,arr){var box=h('div',{cls:'ip'}),grid=h('div',{cls:'ig'});
- box.append(h('div',{cls:'ib'},[h('b',{txt:'图片（'+arr.length+' 张）：点「说明」给图片写文字'}),btn('上传图片',function(){up(arr)},'p'),btn('从图库选择',function(){lib(arr)})]));
- arr.forEach(function(im,i){var off=im.status==='隐藏';KIND.set(im,'m');PAR.set(im,owner);PARR.set(im,arr);
-  var t=plain(im.caption);grid.append(h('div',{cls:'ic'+(off?' off':'')+(im===cur?' on':'')},[h('img',{src:imgUrl(im.src),loading:'lazy',on:{click:function(){pick(im)}}}),
-   h('div',{cls:'ia'},[btn('◀',function(){mv(im,-1)}),btn('▶',function(){mv(im,1)}),btn(off?'隐藏':'显示',function(){im.status=off?'显示':'隐藏';dirty=true;rerender()}),btn('说明',function(){pick(im)}),btn('✕',function(){del(im)},'d')]),h('small',{txt:t?t.slice(0,22):'（无说明）'})]))});
- box.append(grid);return box}
+ box.append(h('div',{cls:'ib'},[h('b',{txt:'图片（'+arr.length+' 张）'}),btn('上传图片（可多选）',function(){up(arr)},'p'),btn('从图库选择',function(){lib(arr)})]),h('p',{cls:'hint',txt:'可以一次选多张，或直接把图片文件拖到这个框里上传；用鼠标拖动下面的图片可以调整顺序；点「说明」给图片写文字。'}));
+ arr.forEach(function(im,i){var off=im.status==='隐藏';KIND.set(im,'m');PAR.set(im,owner);PARR.set(im,arr);var t=plain(im.caption);
+  var card=h('div',{cls:'ic'+(off?' off':'')+(im===cur?' on':'')},[h('img',{src:imgUrl(im.src),loading:'lazy',draggable:'false',on:{click:function(){pick(im)}}}),
+   h('div',{cls:'ia'},[btn('◀',function(){mv(im,-1)}),btn('▶',function(){mv(im,1)}),btn(off?'隐藏':'显示',function(){im.status=off?'显示':'隐藏';dirty=true;rerender()}),btn('说明',function(){pick(im)}),btn('✕',function(){del(im)},'d')]),h('small',{txt:(i+1)+'. '+(t?t.slice(0,20):'（无说明）')})]);
+  dnd(card,im,arr,'x');grid.append(card)});
+ box.append(grid);
+ box.addEventListener('dragover',function(e){if(e.dataTransfer&&[].indexOf.call(e.dataTransfer.types,'Files')>=0){e.preventDefault();box.classList.add('filedrop')}});
+ box.addEventListener('dragleave',function(e){if(!box.contains(e.relatedTarget))box.classList.remove('filedrop')});
+ box.addEventListener('drop',function(e){box.classList.remove('filedrop');var fl=e.dataTransfer&&e.dataTransfer.files;if(fl&&fl.length){e.preventDefault();upFiles([].slice.call(fl),arr)}});
+ return box}
 function blockPanel(p){var box=h('div',{cls:'ip'}),bl=p.blocks=p.blocks||[];
- box.append(h('div',{cls:'ib'},[h('b',{txt:'展览块：一个展览一块，里面放图片，图片下面有可以自由编辑的文字'}),btn('＋ 新建展览块',function(){commit();var b={label:'新展览',images:[],moreImages:[],text:'',textEn:'',status:'显示'};bl.push(b);dirty=true;KIND.set(b,'b');PAR.set(b,p);PARR.set(b,bl);pick(b)},'p')]));
+ box.append(h('div',{cls:'ib'},[h('b',{txt:'展览块：一个展览一块，里面放图片，图片下面有可以自由编辑的文字（可以拖动整块调整顺序）'}),btn('＋ 新建展览块',function(){commit();var b={label:'新展览',images:[],moreImages:[],text:'',textEn:'',status:'显示'};bl.push(b);dirty=true;KIND.set(b,'b');PAR.set(b,p);PARR.set(b,bl);pick(b)},'p')]));
  if(!bl.length){box.append(h('p',{cls:'hint',txt:'这一页现在还没有展览块。点「＋ 新建展览块」，再在里面上传或选择图片。'}));
   if((p.images||[]).length)box.append(btn('把下面的图片按说明自动分成展览块',function(){commit();var lg=[];toBlocks(p,lg);msg(lg.join('；')||'没有可转换的图片。');panel()}));
   if(String(p.slug||'').toLowerCase()=='views')box.append(' ',btn('恢复原来的 16 张展览图片',function(){restoreViews(p)}))}
  bl.forEach(function(b,i){var off=b.status==='隐藏';KIND.set(b,'b');PAR.set(b,p);PARR.set(b,bl);
-  box.append(h('div',{cls:'bk'+(off?' off':'')},[h('div',{cls:'bt'},[h('b',{txt:'展览块 '+(i+1)+(b.label?'：'+b.label:'')+'（'+(b.images||[]).length+' 张图）'}),btn('编辑',function(){pick(b)},'p'),btn('◀',function(){mv(b,-1)}),btn('▶',function(){mv(b,1)}),btn(off?'隐藏':'显示',function(){b.status=off?'显示':'隐藏';dirty=true;rerender()}),btn('✕',function(){del(b)},'d')]),h('div',{cls:'bth'},(b.images||[]).slice(0,10).map(function(im){return h('img',{src:imgUrl(im.src),loading:'lazy'})}))]))});
+  var card=h('div',{cls:'bk'+(off?' off':'')},[h('div',{cls:'bt'},[h('b',{txt:'展览块 '+(i+1)+(b.label?'：'+b.label:'')+'（'+(b.images||[]).length+' 张图）'}),btn('编辑',function(){pick(b)},'p'),btn('◀',function(){mv(b,-1)}),btn('▶',function(){mv(b,1)}),btn(off?'隐藏':'显示',function(){b.status=off?'显示':'隐藏';dirty=true;rerender()}),btn('✕',function(){del(b)},'d')]),h('div',{cls:'bth'},(b.images||[]).slice(0,10).map(function(im){return h('img',{src:imgUrl(im.src),loading:'lazy',draggable:'false'})}))]);
+  dnd(card,b,bl,'y');box.append(card)});
  return box}
 function pageImgs(p,box){var lay=p.layout||'slideshow';if(lay=='gallery'||(p.blocks||[]).length)box.append(blockPanel(p));if(lay!='gallery'||(p.images||[]).length)box.append(imgPanel(p,p.images=p.images||[]))}
 function panel(){tree();var k=KIND.get(cur)||(cur===SITE?'site':''),bar=$('#bar'),form=$('#form'),im=$('#imgs');bar.innerHTML='';form.innerHTML='';im.innerHTML='';
@@ -210,12 +229,14 @@ function shrink(file,max){return new Promise(function(res,rej){var u=URL.createO
  var c=document.createElement('canvas');c.width=Math.round(w*k);c.height=Math.round(hh*k);var x=c.getContext('2d');x.fillStyle='#fff';x.fillRect(0,0,c.width,c.height);x.drawImage(im,0,0,c.width,c.height);c.toBlob(function(b){URL.revokeObjectURL(u);res({blob:b,ext:'jpg'})},'image/jpeg',.9)};im.onerror=function(){rej(new Error('无法读取图片：'+file.name))};im.src=u})}
 function blob64(b){return new Promise(function(res){var r=new FileReader();r.onload=function(){res(String(r.result).split(',')[1])};r.readAsDataURL(b)})}
 function stamp(){var d=new Date(),p=function(n){return String(n).padStart(2,'0')};return d.getFullYear()+p(d.getMonth()+1)+p(d.getDate())+p(d.getHours())+p(d.getMinutes())+p(d.getSeconds())}
-async function up(arr,replace){if(!(C.tok&&C.repo)){msg('上传图片需要先连接 GitHub：请点「设置」。',1);return}
- var fs=await pickF();if(!fs.length)return;if(replace)fs=fs.slice(0,1);var n=0;
+async function putImg(name,b){for(var t=0;t<4;t++){try{return await ghp('contents/'+name,{method:'PUT',body:JSON.stringify({message:'Upload image',content:b})})}catch(e){if(t<3&&(e.status==409||e.status==422||e.status==502||e.status==503)){await new Promise(function(r){setTimeout(r,800*(t+1))});continue}throw e}}}
+async function upFiles(fs,arr,replace){fs=fs.filter(function(f){return /^image\//.test(f.type)});if(!fs.length){msg('没有找到图片文件。',1);return}
+ if(!(C.tok&&C.repo)){msg('上传图片需要先连接 GitHub：请点「设置」。',1);return}if(replace)fs=fs.slice(0,1);var out=[],bad=0,last='';
  for(var i=0;i<fs.length;i++){msg('正在上传 '+(i+1)+'/'+fs.length+'：'+fs[i].name+' …');
-  try{var r=await shrink(fs[i],2400),name='images/u'+stamp()+'-'+Math.random().toString(36).slice(2,6)+'.'+r.ext,b=await blob64(r.blob);await ghp('contents/'+name,{method:'PUT',body:JSON.stringify({message:'Upload image',content:b})});
-   var src='/'+name;LOCAL[src]=URL.createObjectURL(r.blob);if(replace)replace.src=src;else arr.push({src:src,caption:'',captionEn:'',status:'显示'});dirty=true;n++}catch(e){err(e);break}}
- if(n)msg('已上传 '+n+' 张图片。别忘了点右上角「保存并发布」。');rerender()}
+  try{var r=await shrink(fs[i],2400),name='images/u'+stamp()+'-'+(i+1)+Math.random().toString(36).slice(2,5)+'.'+r.ext,b=await blob64(r.blob);await putImg(name,b);var src='/'+name;LOCAL[src]=URL.createObjectURL(r.blob);out.push(src)}catch(e){bad++;last=e.message||String(e)}}
+ out.forEach(function(src){if(replace)replace.src=src;else arr.push({src:src,caption:'',captionEn:'',status:'显示'})});
+ if(out.length)dirty=true;msg((out.length?'已上传 '+out.length+' 张图片。可以拖动图片调整顺序，最后点右上角「保存并发布」。':'')+(bad?'　有 '+bad+' 张上传失败：'+last:''),bad&&!out.length);rerender()}
+function up(arr,replace){pickF().then(function(fs){if(fs.length)upFiles(fs,arr,replace)})}
 function lib(arr){if(!(C.tok&&C.repo)){msg('请先连接 GitHub：点「设置」。',1);return}msg('读取图库…');
  ghp('contents/images?t='+Date.now()).then(function(l){msg('');var g=$('#libg');g.innerHTML='';(l||[]).filter(function(f){return f.type=='file'&&/\.(jpe?g|png|webp|gif)$/i.test(f.name)}).forEach(function(f){g.append(h('label',{},[h('img',{src:'images/'+f.name,loading:'lazy'}),h('input',{type:'checkbox',value:'/images/'+f.name}),' '+f.name]))});LIBARR=arr;$('#lib').showModal()}).catch(err)}
 $('#libok').onclick=function(){[].forEach.call($('#libg').querySelectorAll('input:checked'),function(c){LIBARR.push({src:c.value,caption:'',captionEn:'',status:'显示'})});dirty=true;$('#lib').close();rerender()};$('#libno').onclick=function(){$('#lib').close()};
