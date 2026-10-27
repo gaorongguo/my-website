@@ -176,10 +176,10 @@
        "label": "Altonaer Museum, Ge",
        "images": [
         {
-         "caption": "",
+         "caption": "<p>museum views-01.jpg</p>",
          "captionEn": "",
          "status": "显示",
-         "src": "/images/views-01.jpg"
+         "src": "/images/u20261027174847-m2rb.jpg"
         },
         {
          "caption": "",
@@ -189,7 +189,8 @@
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "text": ""
       },
       {
        "label": "Altonaer Museum,",
