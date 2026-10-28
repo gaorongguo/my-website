@@ -322,7 +322,7 @@
        ],
        "moreImages": [],
        "text": "<p>泰勒·韦新肖像奖，国家肖像画廊，伦敦，英国</p>",
-       "textEn": "<p>National Portrait Gallery, London</p>",
+       "textEn": "<p>Taylor Wessing Portrait Prize, National Portrait Gallery, London</p>",
        "status": "显示"
       },
       {
@@ -350,7 +350,7 @@
        "status": "显示",
        "moreImages": [],
        "text": "<p>Altonaer Museum, Germany</p>",
-       "textEn": ""
+       "textEn": "<p>Hamburg Portfolio Reviews, Altonaer Museum,Hamburg, Germany</p>"
       },
       {
        "label": "Wuhan Photo Fair",
@@ -379,7 +379,7 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>DongGang Museum of Photography</p>",
+       "textEn": "<p>14th Dong Gang International Photo Festival,Dong Gang Museum of Photography,Yeongwol-gun,Korea</p>",
        "text": "<p>东江国际摄影节，东江摄影博物馆，宁越，韩国&nbsp;</p>"
       },
       {
@@ -400,8 +400,8 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>新加坡国际摄影节，国家图书馆，新加坡</p>",
-       "text": "<p>National Library，Singapore</p>"
+       "textEn": "<p>Singapore International Photography Festival,Open Plaza, National Library, Singapore</p><p><br></p><p><br></p>",
+       "text": "<p>新加坡国际摄影节，国家图书馆，新加坡</p>"
       },
       {
        "label": "Today Art Museum,Beijing,China",
@@ -430,7 +430,7 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>PHODAR Biennial</p>",
+       "textEn": "<p>PHODAR Biennial,Iliya Beshkov Art Gallery,Pleven,Bulgaria</p>",
        "text": "<p>PHODAR 双年展</p>"
       },
       {
@@ -457,7 +457,7 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>La RATP invite</p>",
+       "textEn": "<p>La RATP invite,Palais Royale Musee du Louvre station, Paris,France</p>",
        "text": "<p>La RATP invite，卢浮宫地铁站，巴黎，法国</p>"
       },
       {
