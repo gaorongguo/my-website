@@ -284,19 +284,19 @@
        "label": "Altonaer Museum, Ge",
        "images": [
         {
-         "src": "/images/u20261028215507-1c1h.jpg",
+         "src": "/images/u20261028215734-1q6m.jpg",
          "caption": "",
          "captionEn": "",
          "status": "显示"
         },
         {
-         "src": "/images/u20261028215510-2pbk.jpg",
+         "src": "/images/u20261028215741-2dh4.jpg",
          "caption": "",
          "captionEn": "",
          "status": "显示"
         },
         {
-         "src": "/images/u20261028215512-39i7.jpg",
+         "src": "/images/u20261028215745-3z6u.jpg",
          "caption": "",
          "captionEn": "",
          "status": "显示"
@@ -304,149 +304,187 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "text": "",
+       "text": "<p>Altonaer Museum, Germany</p>",
        "textEn": ""
       },
       {
        "label": "National Portrait Ga",
-       "images": [
-        {
-         "caption": "",
-         "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-04.jpg"
-        }
-       ],
+       "images": [],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "",
+       "text": ""
       },
       {
        "label": "Wuhan Photo Fair",
        "images": [
         {
+         "src": "/images/u20261028215605-19x1.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-05.jpg"
+         "status": "显示"
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "",
+       "text": "<p>Wuhan Photo Fair</p>"
       },
       {
        "label": "Dong Gang Museum of ",
        "images": [
         {
+         "src": "/images/u20261028215909-1x4e.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-06.jpg"
+         "status": "显示"
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "",
+       "text": "<p>&nbsp;DongGang Museum of Photography</p>"
       },
       {
        "label": "National Library, Si",
        "images": [
         {
+         "src": "/images/u20261028215931-1cki.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-07.jpg"
+         "status": "显示"
+        },
+        {
+         "src": "/images/u20261028215933-2tsq.jpg",
+         "caption": "",
+         "captionEn": "",
+         "status": "显示"
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "",
+       "text": "<p>National Library，Singapore</p>"
       },
       {
        "label": "Mingsheng Art Museum",
        "images": [
         {
+         "src": "/images/u20261028220015-1haf.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-08.jpg"
+         "status": "显示"
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "",
+       "text": ""
       },
       {
        "label": "PHODAR Biennial",
        "images": [
         {
+         "src": "/images/u20261028220039-1dp0.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-09.jpg"
+         "status": "显示"
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "<p>La RATP invite</p>",
+       "text": ""
       },
       {
        "label": "La RATP invite",
        "images": [
         {
+         "src": "/images/u20261028220115-1uby.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-10.jpg"
+         "status": "显示"
         },
         {
+         "src": "/images/u20261028220124-2zq3.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-11.jpg"
+         "status": "显示"
+        },
+        {
+         "src": "/images/u20261028220128-3586.jpg",
+         "caption": "",
+         "captionEn": "",
+         "status": "显示"
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "<p>La RATP invite</p>"
       },
       {
        "label": "PHOTOQUAI photograph",
        "images": [
         {
+         "src": "/images/u20261028220202-1tqc.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-12.jpg"
+         "status": "显示"
         },
         {
+         "src": "/images/u20261028220206-28jf.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-13.jpg"
+         "status": "显示"
         },
         {
+         "src": "/images/u20261028220210-3674.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-14.jpg"
+         "status": "显示"
+        },
+        {
+         "src": "/images/u20261028220213-4x98.jpg",
+         "caption": "",
+         "captionEn": "",
+         "status": "显示"
+        },
+        {
+         "src": "/images/u20261028220215-5zk6.jpg",
+         "caption": "",
+         "captionEn": "",
+         "status": "显示"
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "<p>PHOTOQUAI&nbsp;</p>"
       },
       {
        "label": "Sotheby's, London, U",
        "images": [
         {
+         "src": "/images/u20261028220234-1axx.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-15.jpg"
+         "status": "显示"
         },
         {
+         "src": "/images/u20261028220237-2t2w.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示",
-         "src": "/images/views-16.jpg"
+         "status": "显示"
+        },
+        {
+         "src": "/images/u20261028220239-35kg.jpg",
+         "caption": "",
+         "captionEn": "",
+         "status": "显示"
         }
        ],
        "status": "显示",
-       "moreImages": []
+       "moreImages": [],
+       "textEn": "<p>Sotheby's, London</p>"
       }
      ],
      "style": {},
