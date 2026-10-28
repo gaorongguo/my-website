@@ -431,7 +431,7 @@
        "status": "显示",
        "moreImages": [],
        "textEn": "<p>PHODAR Biennial</p>",
-       "text": ""
+       "text": "<p>PHODAR 双年展</p>"
       },
       {
        "label": "La RATP invite",
@@ -457,7 +457,8 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>La RATP invite</p>"
+       "textEn": "<p>La RATP invite</p>",
+       "text": "<p>La RATP invite，卢浮宫地铁站，巴黎，法国</p>"
       },
       {
        "label": "PHOTOQUAI photograph",
@@ -483,7 +484,8 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>PHOTOQUAI Biennial</p><p><br></p>"
+       "textEn": "<p>PHOTOQUAI photography biennial,Quai Branly Museum,Paris,France</p><p><br></p>",
+       "text": "<p>第四届 PHOTOQUAI 双年展，盖布朗利博物馆，巴黎，法国</p>"
       },
       {
        "label": "Sotheby's, London, U",
@@ -509,8 +511,8 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>Sotheby's, London</p>",
-       "text": "<p>Sotheby's, London</p>"
+       "textEn": "<p>Sotheby's ,London,UK</p>",
+       "text": "<p>苏富比画廊，伦敦，英国</p>"
       }
      ],
      "style": {},
