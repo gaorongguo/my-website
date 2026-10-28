@@ -311,6 +311,21 @@
        "status": "显示"
       },
       {
+       "label": "新展览",
+       "images": [
+        {
+         "src": "/images/u20261028234330-19xx.jpg",
+         "caption": "",
+         "captionEn": "",
+         "status": "显示"
+        }
+       ],
+       "moreImages": [],
+       "text": "",
+       "textEn": "<p>National Portrait Gallery, London</p>",
+       "status": "显示"
+      },
+      {
        "label": "Altonaer Museum, Ge",
        "images": [
         {
@@ -504,21 +519,6 @@
        "moreImages": [],
        "textEn": "<p>Sotheby's, London</p>",
        "text": "<p>Sotheby's, London</p>"
-      },
-      {
-       "label": "新展览",
-       "images": [
-        {
-         "src": "/images/u20261028234330-19xx.jpg",
-         "caption": "",
-         "captionEn": "",
-         "status": "显示"
-        }
-       ],
-       "moreImages": [],
-       "text": "",
-       "textEn": "<p>National Portrait Gallery, London</p>",
-       "status": "显示"
       }
      ],
      "style": {},
