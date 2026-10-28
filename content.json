@@ -306,7 +306,7 @@
         }
        ],
        "moreImages": [],
-       "text": "",
+       "text": "<p>第八届约翰·莫尔绘画奖（中国）作品展，上海久事美术馆，上海，中国</p>",
        "textEn": "<p>8th John Moore's Painting Prize (China) Exhibition, Shanghai Jiushi Art Museum, Shanghai, China</p>",
        "status": "显示"
       },
@@ -321,7 +321,7 @@
         }
        ],
        "moreImages": [],
-       "text": "",
+       "text": "<p>泰勒·韦新肖像奖，国家肖像画廊，伦敦，英国</p>",
        "textEn": "<p>National Portrait Gallery, London</p>",
        "status": "显示"
       },
@@ -353,14 +353,6 @@
        "textEn": ""
       },
       {
-       "label": "National Portrait Ga",
-       "images": [],
-       "status": "显示",
-       "moreImages": [],
-       "textEn": "",
-       "text": ""
-      },
-      {
        "label": "Wuhan Photo Fair",
        "images": [
         {
@@ -372,7 +364,7 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "",
+       "textEn": "<p>Wuhan Photo Fair</p>",
        "text": "<p>Wuhan Photo Fair</p>"
       },
       {
@@ -387,8 +379,8 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "",
-       "text": "<p>&nbsp;DongGang Museum of Photography</p>"
+       "textEn": "<p>DongGang Museum of Photography</p>",
+       "text": "<p>东江国际摄影节，东江摄影博物馆，宁越，韩国&nbsp;</p>"
       },
       {
        "label": "National Library, Si",
@@ -408,7 +400,7 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "",
+       "textEn": "<p>新加坡国际摄影节，国家图书馆，新加坡</p>",
        "text": "<p>National Library，Singapore</p>"
       },
       {
@@ -424,7 +416,7 @@
        "status": "显示",
        "moreImages": [],
        "textEn": "<p>Today Art Museum,Beijing,China</p>",
-       "text": ""
+       "text": "<p>今日美术馆，中国</p>"
       },
       {
        "label": "PHODAR Biennial",
