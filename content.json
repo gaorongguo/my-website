@@ -474,12 +474,28 @@
        "moreImages": [],
        "textEn": "<p>Sotheby's, London</p>",
        "text": "<p>Sotheby's, London</p>"
+      },
+      {
+       "label": "新展览",
+       "images": [
+        {
+         "src": "/images/u20261028233924-1hb0.jpg",
+         "caption": "",
+         "captionEn": "",
+         "status": "显示"
+        }
+       ],
+       "moreImages": [],
+       "text": "",
+       "textEn": "<p>8th John Moore's Painting Prize (China) Exhibition, TAG Art Museum, Qingdao, China</p>",
+       "status": "显示"
       }
      ],
      "style": {},
      "images": [],
      "moreImages": [],
-     "text": ""
+     "text": "",
+     "textEn": ""
     }
    ],
    "categories": [],
