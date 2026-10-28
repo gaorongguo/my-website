@@ -296,6 +296,21 @@
        "status": "显示"
       },
       {
+       "label": "新展览",
+       "images": [
+        {
+         "src": "/images/u20261028234245-1fxg.jpg",
+         "caption": "",
+         "captionEn": "",
+         "status": "显示"
+        }
+       ],
+       "moreImages": [],
+       "text": "",
+       "textEn": "<p>8th John Moore's Painting Prize (China) Exhibition, Shanghai Jiushi Art Museum, Shanghai, China</p>",
+       "status": "显示"
+      },
+      {
        "label": "Altonaer Museum, Ge",
        "images": [
         {
@@ -494,7 +509,7 @@
        "label": "新展览",
        "images": [
         {
-         "src": "/images/u20261028234245-1fxg.jpg",
+         "src": "/images/u20261028234330-19xx.jpg",
          "caption": "",
          "captionEn": "",
          "status": "显示"
@@ -502,7 +517,7 @@
        ],
        "moreImages": [],
        "text": "",
-       "textEn": "<p>8th John Moore's Painting Prize (China) Exhibition, Shanghai Jiushi Art Museum, Shanghai, China</p>",
+       "textEn": "<p>National Portrait Gallery, London</p>",
        "status": "显示"
       }
      ],
