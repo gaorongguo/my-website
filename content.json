@@ -539,6 +539,12 @@
      "entriesStyle": "side",
      "images": [
       {
+       "caption": "",
+       "captionEn": "<p>https://assignments.thebppa.com/curatorsiwd2021</p>",
+       "status": "显示",
+       "src": "/images/u20261028232617-199x.jpg"
+      },
+      {
        "caption": "<p>Stunning Photos Of Identical Twins As Grown-Ups Show How Fate Takes Its Course By Priscilla Frank<br><a href=\"https://www.huffpost.com/entry/gao-rongguo_n_5030091\">https://www.huffpost.com/entry/gao-rongguo_n_5030091</a></p>",
        "captionEn": "",
        "status": "显示",
@@ -551,22 +557,16 @@
        "status": "显示"
       },
       {
-       "caption": "",
-       "captionEn": "",
-       "status": "显示",
-       "src": "/images/u20261028220714-1mqu.jpg"
-      },
-      {
-       "caption": "",
-       "captionEn": "",
-       "status": "显示",
-       "src": "/images/u20261028220844-14wj.jpg"
-      },
-      {
        "src": "/images/u20261028232041-16ok.png",
        "caption": "",
        "captionEn": "<p><b>Double take: Poignant portraits of 50-year-old identical twins reveal how differences in lifestyle have affected the way they age&nbsp;</b><b>By ANNABEL FENWICK ELLIOTT, COLUMNIST</b></p><p>https://www.dailymail.com/lifestyle/article-2591087/Double-Poignant-portraits-50-year-old-identical-twins-reveal-differences-lifestyle-affected-way-age.html</p>",
        "status": "显示"
+      },
+      {
+       "caption": "",
+       "captionEn": "",
+       "status": "显示",
+       "src": "/images/u20261028220714-1mqu.jpg"
       }
      ],
      "text": "<br>",
