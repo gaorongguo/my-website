@@ -393,7 +393,7 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>La RATP invite</p>",
+       "textEn": "<p>PHODAR Biennial</p>",
        "text": ""
       },
       {
@@ -558,6 +558,12 @@
       },
       {
        "src": "/images/u20261028220714-1mqu.jpg",
+       "caption": "",
+       "captionEn": "",
+       "status": "显示"
+      },
+      {
+       "src": "/images/u20261028220844-14wj.jpg",
        "caption": "",
        "captionEn": "",
        "status": "显示"
