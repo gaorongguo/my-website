@@ -484,7 +484,8 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "<p>Sotheby's, London</p>"
+       "textEn": "<p>Sotheby's, London</p>",
+       "text": "<p>Sotheby's, London</p>"
       }
      ],
      "style": {},
