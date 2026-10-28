@@ -367,7 +367,7 @@
        "text": "<p>National Library，Singapore</p>"
       },
       {
-       "label": "Mingsheng Art Museum",
+       "label": "Today Art Museum,Beijing,China",
        "images": [
         {
          "src": "/images/u20261028220015-1haf.jpg",
@@ -378,7 +378,7 @@
        ],
        "status": "显示",
        "moreImages": [],
-       "textEn": "",
+       "textEn": "<p>Today Art Museum,Beijing,China</p>",
        "text": ""
       },
       {
