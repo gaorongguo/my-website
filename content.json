@@ -284,10 +284,10 @@
        "label": "新展览",
        "images": [
         {
-         "src": "/images/u20261028233924-1hb0.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示"
+         "status": "显示",
+         "src": "/images/u20261028233924-1hb0.jpg"
         }
        ],
        "moreImages": [],
@@ -299,10 +299,10 @@
        "label": "新展览",
        "images": [
         {
-         "src": "/images/u20261028234245-1fxg.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示"
+         "status": "显示",
+         "src": "/images/u20261028234245-1fxg.jpg"
         }
        ],
        "moreImages": [],
@@ -314,10 +314,10 @@
        "label": "新展览",
        "images": [
         {
-         "src": "/images/u20261028234330-19xx.jpg",
          "caption": "",
          "captionEn": "",
-         "status": "显示"
+         "status": "显示",
+         "src": "/images/u20261028234330-19xx.jpg"
         }
        ],
        "moreImages": [],
@@ -591,16 +591,16 @@
        "src": "/images/u20261028230432-1p11.png"
       },
       {
-       "src": "/images/u20261028231744-17ms.png",
        "caption": "",
        "captionEn": "<p><b>See the Dramatic Differences Between Identical Twins Over Time by Kyle Chayka</b></p><p>https://time.com/45301/see-the-dramatic-changes-of-these-identical-twins-over-time/</p>",
-       "status": "显示"
+       "status": "显示",
+       "src": "/images/u20261028231744-17ms.png"
       },
       {
-       "src": "/images/u20261028232041-16ok.png",
        "caption": "",
        "captionEn": "<p><b>Double take: Poignant portraits of 50-year-old identical twins reveal how differences in lifestyle have affected the way they age&nbsp;</b><b>By ANNABEL FENWICK ELLIOTT, COLUMNIST</b></p><p>https://www.dailymail.com/lifestyle/article-2591087/Double-Poignant-portraits-50-year-old-identical-twins-reveal-differences-lifestyle-affected-way-age.html</p>",
-       "status": "显示"
+       "status": "显示",
+       "src": "/images/u20261028232041-16ok.png"
       },
       {
        "caption": "",
@@ -609,33 +609,39 @@
        "src": "/images/u20261028220714-1mqu.jpg"
       },
       {
-       "src": "/images/u20261028233100-119h.jpg",
        "caption": "",
        "captionEn": "<p>https://blowphoto.com/wp-content/uploads/2016/01/BLOW-11-LARGE-17.jpg</p>",
-       "status": "显示"
+       "status": "显示",
+       "src": "/images/u20261028233100-119h.jpg"
       },
       {
-       "src": "/images/u20261028233243-195d.png",
        "caption": "",
        "captionEn": "",
-       "status": "显示"
+       "status": "显示",
+       "src": "/images/u20261028233243-195d.png"
       },
       {
-       "src": "/images/u20261028233258-1tym.jpg",
        "caption": "",
        "captionEn": "<p>https://books.google.com.tw/books?id=oskHDAAAQBAJ&amp;pg=PA4-IA1&amp;lpg=PA4-IA1&amp;dq=Gao+Rongguo+Two+of+a+Kind&amp;source=bl&amp;ots=R33HocqNA4&amp;sig=aHs7fofwgNICn27FjyW_tQWcWHo&amp;hl=en&amp;sa=X&amp;ved=0ahUKEwijzIrbrN_bAhWLQd4KHfdEC6UQ6AEIJzAA#v=onepage&amp;q=Gao%20Rongguo%20Two%20of%20a%20Kind&amp;f=false</p>",
-       "status": "显示"
+       "status": "显示",
+       "src": "/images/u20261028233258-1tym.jpg"
       },
       {
-       "src": "/images/u20261028233439-1mya.jpg",
        "caption": "",
        "captionEn": "",
-       "status": "显示"
+       "status": "显示",
+       "src": "/images/u20261028233439-1mya.jpg"
       },
       {
-       "src": "/images/u20261028233445-1ttk.jpg",
        "caption": "",
        "captionEn": "",
+       "status": "显示",
+       "src": "/images/u20261028233445-1ttk.jpg"
+      },
+      {
+       "src": "/images/u20261029212936-17ja.jpg",
+       "caption": "",
+       "captionEn": "<p>https://dergreif.org/shop/products/der-greif-16</p>",
        "status": "显示"
       }
      ],
